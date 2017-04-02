@@ -1,3 +1,5 @@
+class acb_1_2{
+    
     public static boolean isValidTriangle(double a, double b, double c) {
         return ((a + b > c) && (b + c > a) && (c + a > b));
     }
@@ -31,3 +33,5 @@
         } else
         System.out.println("no way");
     }
+
+}
