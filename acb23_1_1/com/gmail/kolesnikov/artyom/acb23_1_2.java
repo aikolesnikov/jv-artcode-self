@@ -1,5 +1,7 @@
 package com.gmail.kolesnikov.artyom;
 
+import static com.gmail.kolesnikov.artyom.utilities.Writer.*;
+
 class acb_1_2{
     
     public static boolean isValidTriangle(double a, double b, double c) {
@@ -13,12 +15,8 @@ class acb_1_2{
     public static void main(String[] args) {
         // write your code here
 
-        double a = 7;
-        double b = 10;
-        double c = 5;
-
-        double perim = 0;
-        double area = 0;
+        double a = 7, b = 10, c = 5;
+        double perim = 0, area = 0;
 
         if (isValidTriangle(a, b, c)) {
             perim = evaluatePerimeter(a, b, c) / 2;
@@ -28,8 +26,8 @@ class acb_1_2{
             System.out.print("Triangle area is:");
             System.out.println(area);
 
-            System.out.println("Formatted:");
-            System.out.printf("a = %.2f, b = %.2f, c = %.2f\n", a, b, c);
+            printlnS("Formatted:");
+            printfD(a);
             System.out.printf("Area is %.2f\n", area);
 
         } else

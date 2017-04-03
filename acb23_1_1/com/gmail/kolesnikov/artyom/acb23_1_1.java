@@ -11,14 +11,14 @@ class acb23_1_1{
 
 	public static void main (String[] args){
 		
-	        Scanner input = new Scanner (System.in);   
+		Scanner input = new Scanner (System.in);
 
 		System.out.println("Кто ты ?:");      
-		SayHello(input.next());
+		SayHello(input.nextLine());
 
 		int age = 0;
 		System.out.println("Скока тибе?:");
-		
+
 		try { 
 			age = input.nextInt();
 
