@@ -1,3 +1,5 @@
+package com.gmail.kolesnikov.artyom;
+
 class acb_1_2{
     
     public static boolean isValidTriangle(double a, double b, double c) {

@@ -1,3 +1,5 @@
+package com.gmail.kolesnikov.artyom;
+
 import java.util.Scanner;
 
 
