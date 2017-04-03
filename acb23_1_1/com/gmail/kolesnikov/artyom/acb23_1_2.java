@@ -20,15 +20,10 @@ class acb_1_2{
 
         if (isValidTriangle(a, b, c)) {
             perim = evaluatePerimeter(a, b, c) / 2;
-            System.out.println(area);
             area = Math.sqrt(perim * (perim - a) * (perim - b) * (perim - c));
 
-            System.out.print("Triangle area is:");
-            System.out.println(area);
-
-            printlnS("Formatted:");
-            printfD(a);
-            System.out.printf("Area is %.2f\n", area);
+            println_d("a=", ", b=", a, b);
+            println_d("Triangle area is: ", area);
 
         } else
         System.out.println("no way");

@@ -9,12 +9,18 @@ public class Writer {
         System.out.println(s);
     }
 
-    public static void printfD(double a){
-        System.out.printf("%.2f", a);
+    public static void println_d(String s, double a){
+        System.out.print(s);
+        System.out.printf ("%.2f", a);
+        System.out.println();
     }
 
-    public static void printfD(double a, double b){
-        System.out.printf("%.2f, %.2f", a, b);
+    public static void println_d(String s1, String s2, double a, double b){
+        System.out.print(s1);
+        System.out.printf ("%.2f", a);
+        System.out.print(s2);
+        System.out.printf ("%.2f", b);
+        System.out.println();
     }
 
 }
