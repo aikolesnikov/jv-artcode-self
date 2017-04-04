@@ -16,7 +16,7 @@ class acb_1_2{
         // write your code here
 
         double a = 7, b = 10, c = 5;
-        double perim = 0, area = 0;
+        double perim = 0.0, area = 0.0;
 
         if (isValidTriangle(a, b, c)) {
             perim = evaluatePerimeter(a, b, c) / 2;
