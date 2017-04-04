@@ -1,14 +1,14 @@
-package com.gmail.kolesnikov.artyom;
+package com.gmail.kolesnikov.artyom.acb_23_1_00;
 
-import static com.gmail.kolesnikov.artyom.utilities.Writer.*;
+import static com.gmail.kolesnikov.artyom.acb_23_1_00.utilities.Writer.*;
 
-class acb_1_2{
+class acb23_1_2{
     
-    public static boolean isValidTriangle(double a, double b, double c) {
+    private static boolean isValidTriangle(double a, double b, double c) {
         return ((a + b > c) && (b + c > a) && (c + a > b));
     }
 
-    public static double evaluatePerimeter(double a, double b, double c) {
+    private static double evaluatePerimeter(double a, double b, double c) {
         return (a + b + c);
     }
 

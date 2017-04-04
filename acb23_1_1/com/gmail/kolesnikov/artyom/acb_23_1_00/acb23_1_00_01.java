@@ -1,9 +1,9 @@
-package com.gmail.kolesnikov.artyom;
+package com.gmail.kolesnikov.artyom.acb_23_1_00;
 
 import java.util.Scanner;
 
 
-class acb23_1_1{
+class acb23_1_00_01 {
 
 	public static void SayHello(String str){
 		System.out.println("Hi, " + str);
