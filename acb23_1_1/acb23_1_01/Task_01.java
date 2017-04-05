@@ -1,7 +1,5 @@
 package acb23_1_01;
 
-import acb23_1_01.utilities.Input;
-
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -35,8 +33,5 @@ public class Task_01 {
         } catch (InputMismatchException time) {
             System.out.println("Неправильный ввод. Требуются цифры в диапазоне 0-24");
         }
-
-        Input.Input_byte("HoHoHo");
-
     }
 }
