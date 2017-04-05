@@ -2,19 +2,12 @@ package acb23_1_01;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import static acb23_1_01.utilities.Test.*;
 
 /**
  * 		4.4. Вводим число с плавающей точкой с консоли, и проверяем лежит ли оно в диапазоне от 0 до 1
  */
 public class Task_04 {
-
-    private static boolean isZeroOne(double x){
-        if ((x < 0) || (x > 1)){
-            return false;
-        } else {
-            return true;
-        }
-    }
 
     public static void main(String[] args) {
 
@@ -24,7 +17,7 @@ public class Task_04 {
         try {
             System.out.println("Input x:");
             x = input.nextDouble();
-            System.out.println(isZeroOne(x) ? "yes" : "no");
+            System.out.println(isRange(x, 0, 1) ? "yes" : "no");
 
         } catch (InputMismatchException e2) {
             System.out.println("Wrong input.");
