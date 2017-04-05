@@ -22,14 +22,18 @@ public class Task_01 {
         try {
             byte time = 0;
             time = input.nextByte();
-            if((time < 9) || (time > 18)){
+
+            if ((time < 0) || (time > 24)){
+                System.out.println("Неправильный ввод. Диапазон 0-24");
+            }
+            else if((time < 9) || (time > 18)){
                     System.out.println("Я дома.");
             }
             else {
                     System.out.println("Я на работе.");
                 }
         } catch (InputMismatchException time) {
-            System.out.println("Неправильный ввод.");
+            System.out.println("Неправильный ввод. Требуются цифры в диапазоне 0-24");
         }
 
         Input.Input_byte("HoHoHo");
