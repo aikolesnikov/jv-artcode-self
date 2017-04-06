@@ -1,10 +1,9 @@
-package acb23_1_01;
+package acb_23.acb23_1_01;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static acb23_1_01.utilities.Test.*;
-import static acb23_1_01.utilities.Input.*;
+import static acb_23.utilities.Test.*;
+import static acb_23.utilities.Input.*;
 
 /**
  * 		4.5. Вводим 2 числа. Если первое число больше второго, то вывести на экран разницу чисел. Если второе больше, то выводим сумму.

@@ -1,4 +1,4 @@
-package acb23_1_01;
+package acb_23.acb23_1_01;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

@@ -1,7 +1,7 @@
-package acb23_1_01;
+package acb_23.acb23_1_01;
 
-import static acb23_1_01.utilities.Input.*;
-import static acb23_1_01.utilities.Test.isDivided;
+import static acb_23.utilities.Input.*;
+import static acb_23.utilities.Test.isDivided;
 
 /**
  * 4.7. Вводим два числа, если одно из них делиться на другое без остатка, то выводим тру

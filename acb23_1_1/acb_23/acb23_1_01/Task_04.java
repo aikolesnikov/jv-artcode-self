@@ -1,8 +1,8 @@
-package acb23_1_01;
+package acb_23.acb23_1_01;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import static acb23_1_01.utilities.Test.*;
+import static acb_23.utilities.Test.*;
 
 /**
  * 		4.4. Вводим число с плавающей точкой с консоли, и проверяем лежит ли оно в диапазоне от 0 до 1

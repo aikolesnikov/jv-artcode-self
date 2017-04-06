@@ -1,7 +1,7 @@
-package acb23_1_01;
+package acb_23.acb23_1_01;
 
-import static acb23_1_01.utilities.Input.*;
-import static acb23_1_01.utilities.Test.*;
+import static acb_23.utilities.Input.*;
+import static acb_23.utilities.Test.*;
 
 /**
  * 		4.6. Вводим два числа, вывести их суму, если она в диапазоне от 11 до 19.
