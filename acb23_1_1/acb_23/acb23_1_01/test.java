@@ -15,8 +15,24 @@ public class test {
         return str = "not " + str;
     }
 
+
+    private static String deleteSymbolInside(String str, char c){
+
+        int i = str.indexOf(c);
+        // System.out.println(str.indexOf(c));
+
+        if (i>=0) {
+            str = str.substring(0,i)+str.substring(i+1,str.length());
+            // str = str.substring(0,i-1)+str.substring(i,str.length());
+        }
+
+        return str;
+    }
+
+
     public static void main(String[] args) {
         String s = "not abc";
-        System.out.println((notString("not abc")));
+        // System.out.println((notString("not abc")));
+        System.out.println(deleteSymbolInside(s, 'a'));
     }
 }
