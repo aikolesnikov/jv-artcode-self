@@ -36,3 +36,50 @@ public class test {
         System.out.println(deleteSymbolInside(s, 'a'));
     }
 }
+
+
+package com.gmail;
+
+import java.util.Scanner;
+
+/**
+ * Created by kaim on 4/8/17.
+ */
+
+
+public class Task_2_2 {
+
+    public static void main(String[] args) {
+        // System.out.println(sayHelloS());
+
+        int[] arInt = new int[5];
+
+        for (int i = 0; i < arInt.length; i++) {
+            arInt[i] = i;
+        }
+
+        System.out.println(mySum(arInt));
+        System.out.println(mySum(1,2,3));
+
+    }
+
+    public static int mySum(int... values) {
+        int sum = 0;
+        for (int i = 0; i < values.length; i++) {
+            sum += values[i];
+        }
+
+        return sum;
+    }
+
+    public static String sayHelloS() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Who are you?:");
+        String s = input.nextLine();
+
+        return ("Hellow, " + s);
+    }
+
+}
+
