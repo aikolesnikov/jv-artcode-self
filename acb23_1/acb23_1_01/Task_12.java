@@ -10,7 +10,7 @@ public class Task_12 {
     private static int count_num(int a, int num) {
         int cnt = 0;
 
-        while (a>0) {
+        while (a > 0) {
             if (a % 10 == num) cnt++;
             a /= 10;
         }

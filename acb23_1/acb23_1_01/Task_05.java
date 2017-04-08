@@ -6,14 +6,14 @@ import static utilities.Test.*;
 import static utilities.Input.*;
 
 /**
- * 		4.5. Вводим 2 числа. Если первое число больше второго, то вывести на экран разницу чисел. Если второе больше, то выводим сумму.
+ * 4.5. Вводим 2 числа. Если первое число больше второго, то вывести на экран разницу чисел. Если второе больше, то выводим сумму.
  */
 
 public class Task_05 {
 
     public static void main(String[] args) {
 
-        double a = 0, b =0;
+        double a = 0, b = 0;
         Scanner input = new Scanner(System.in);
 
         a = inputDouble("Input a:");

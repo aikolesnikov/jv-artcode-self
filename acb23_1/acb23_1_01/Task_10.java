@@ -1,10 +1,11 @@
 package acb23_1_01;
 
 import java.util.Scanner;
+
 import static utilities.Input.inputInt;
 
 /**
- * 		5.1. Перевод с числа с десятичной системы счисления в двоичную, и наоборот. Пользователь сам вводит число
+ * 5.1. Перевод с числа с десятичной системы счисления в двоичную, и наоборот. Пользователь сам вводит число
  */
 public class Task_10 {
 
@@ -16,8 +17,8 @@ public class Task_10 {
         t = i;
         String bnrS = "";
 
-        while (t != 0)  {
-            bnrS = (t%2 == 0) ? "0" + bnrS : "1" + bnrS;
+        while (t != 0) {
+            bnrS = (t % 2 == 0) ? "0" + bnrS : "1" + bnrS;
             t = t / 2;
         }
 

@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * 		4.3. Пользователь вводит число. Вывести на экран его удвоенное значение, если число делится на 7 нацело.
+ * 4.3. Пользователь вводит число. Вывести на экран его удвоенное значение, если число делится на 7 нацело.
  */
 public class Task_03 {
     public static void main(String[] args) {
