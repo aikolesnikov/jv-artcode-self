@@ -1,4 +1,4 @@
-package acb23_1_01;
+package week_1;
 
 import static utilities.Input.*;
 import static utilities.Test.*;
