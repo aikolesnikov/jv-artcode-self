@@ -1,6 +1,6 @@
-package com.gmail.kolesnikov.artyom.acb_23_1_00;
+package arch.com.gmail.kolesnikov.artyom.acb_23_1_00;
 
-import static com.gmail.kolesnikov.artyom.acb_23_1_00.utilities.Writer.*;
+import static arch.com.gmail.kolesnikov.artyom.acb_23_1_00.utilities.Writer.*;
 
 class acb23_1_2{
     

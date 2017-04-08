@@ -1,4 +1,4 @@
-package com.gmail.kolesnikov.artyom.acb_23_1_00;
+package arch.com.gmail.kolesnikov.artyom.acb_23_1_00;
 
 import java.util.Scanner;
 
