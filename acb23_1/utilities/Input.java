@@ -32,4 +32,17 @@ public class Input {
         }
     }
 
+    public static int[] generateIntAr(int size, int min, int max) {
+        int[] array = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            array[i] = randomIntValue(min, max);
+        }
+        return array;
+    }
+
+    public static int randomIntValue(int min, int max) {
+        return (int) (Math.random() * (Math.abs(min - max)+1) + min);
+    }
+
 }
