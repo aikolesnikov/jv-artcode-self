@@ -11,7 +11,7 @@ public class Task_2_01 {
 
     public static void main(String[] args) {
 
-        int[] ar = Input.generateIntAr(10,0,10);
+        int[] ar = Input.generateIntAr(10, 0, 10);
         Output.printArray(ar);
 
 
