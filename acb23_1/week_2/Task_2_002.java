@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
  * Week 2 day 2.
  */
-public class Task_2_02 {
+public class Task_2_002 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

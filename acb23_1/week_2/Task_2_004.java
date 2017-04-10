@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * week 2 day 2.
  */
-public class Task_2_04 {
+public class Task_2_004 {
 
     public static void main(String[] args) {
 

@@ -9,7 +9,7 @@ import utilities.Process;
 /**
  * week 2 day 2.
  */
-public class Task_2_03 {
+public class Task_2_003 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

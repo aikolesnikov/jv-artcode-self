@@ -1,42 +1,20 @@
 package week_2;
 
-import java.util.Scanner;
+
+import utilities.Input;
+import utilities.Output;
 
 /**
- * Saturday lesson
+ * Найти минимальное и максимальное значения в массиве и вывести их на консоль
  */
 public class Task_2_01 {
 
     public static void main(String[] args) {
-        // System.out.println(sayHelloS());
 
-        int[] arInt = new int[5];
+        int[] ar = Input.generateIntAr(10,0,10);
+        Output.printArray(ar);
 
-        for (int i = 0; i < arInt.length; i++) {
-            arInt[i] = i;
-        }
 
-        System.out.println(mySum(arInt));
-        System.out.println(mySum(1,2,3));
-
-    }
-
-    private static int mySum(int... values) {
-        int sum = 0;
-        for (int value : values) {
-            sum += value;
-        }
-
-        return sum;
-    }
-
-    public static String sayHelloS() {
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Who are you?:");
-        String s = input.nextLine();
-
-        return ("Hellow, " + s);
     }
 
 }
