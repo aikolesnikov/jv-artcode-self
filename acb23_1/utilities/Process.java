@@ -23,7 +23,7 @@ public class Process {
         int sum = 0;
 
         // for (int i : ar) {
-        // sum += ar[i];
+        // sum += i;
         //}
 
         for (int i = 0; i < ar.length - 1; i++) {
