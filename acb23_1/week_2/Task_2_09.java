@@ -5,6 +5,7 @@ import utilities.Output;
 import static utilities.Input.generateIntAr;
 import static utilities.Input.inputInt;
 
+
 /**
  * 9) Задать два массива случайными числами от 25 до 75.
  * Определить у какого из массивов больше парных елементов.
