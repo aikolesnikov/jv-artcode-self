@@ -32,7 +32,7 @@ public class Task_2_10 {
             return;
         }
 
-        int[] ar1 = generateIntAr(size, inputInt("Ar1 values from?: "), inputInt("Ar2 values to?: "));
+        int[] ar1 = generateIntAr(size, inputInt("Ar1 values from?: "), inputInt("Ar1 values to?: "));
         Output.printArray("Array1:", ar1);
 
         int cutFrom = inputInt("Cut from?: ");
