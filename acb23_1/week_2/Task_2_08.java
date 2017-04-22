@@ -20,15 +20,18 @@ public class Task_2_08 {
             return;
         }
 
-        int[] ar1 = generateIntAr(size, inputInt("Ar1 values from?: "), inputInt("Ar2 values to?: "));
+        int[] ar1 = generateIntAr(size, inputInt("Ar1 values from?: "), inputInt("Ar1 values to?: "));
         int[] ar2 = generateIntAr(size, inputInt("Ar2 values from?: "), inputInt("Ar2 values to?: "));
 
-        Output.printArray("Array1:", ar1);
-        Output.printArray("Array2:", ar2);
+        Output.printArray("Array1: ", ar1);
+        Output.printArray("Array2: ", ar2);
 
-        System.out.println("Summary array: ");
+
+        System.out.print("Summary array: ");
+        int[] ar3 = new int[size];
         for (int i = 0; i < ar1.length; i++) {
-            System.out.print(ar1[i] + ar2[i] + " ");
+            ar3[i] = ar1[i] + ar2[i];
+            System.out.print(ar3[i] + " ");
         }
         System.out.println();
     }
