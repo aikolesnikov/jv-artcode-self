@@ -42,8 +42,8 @@ public class Task_2_07 {
         }
         System.out.println();
 
-        double avgS1=(double)sumArPart1/(arMiddle + ar.length % 2);
-        double avgS2=(double)sumArPart2/(arMiddle + ar.length % 2);
+        double avgS1 = (double) sumArPart1 / (arMiddle + ar.length % 2);
+        double avgS2 = (double) sumArPart2 / (arMiddle + ar.length % 2);
 
         System.out.println("avg1=" + avgS1 + "; avg2=" + avgS2);
         if (avgS1 >= avgS2) {
@@ -52,7 +52,7 @@ public class Task_2_07 {
                 System.out.print(ar[i] + " ");
                 sumArPart1 += ar[i];
             }
-        } else{
+        } else {
             System.out.print("Right part is bigger: ");
             for (int i = 0; i < arMiddle + ar.length % 2; i++) {
                 System.out.print(ar[arMiddle + i] + " ");
@@ -62,5 +62,4 @@ public class Task_2_07 {
 
         System.out.println();
     }
-
 }
