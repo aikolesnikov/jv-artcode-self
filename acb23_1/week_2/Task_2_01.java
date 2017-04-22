@@ -22,7 +22,7 @@ public class Task_2_01 {
             int min = ar[0];
             int max = ar[0];
 
-            for (int i = 1; i < ar.length; i++) {
+            for (int i = 0; i < ar.length-1; i++) {
                 if (ar[i] < min) min = ar[i];
                 if (ar[i] > max) max = ar[i];
             }

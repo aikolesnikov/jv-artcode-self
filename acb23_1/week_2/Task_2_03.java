@@ -26,7 +26,7 @@ public class Task_2_03 {
             System.arraycopy(ar, 1, ar2, 1, ar.length - 1);
 
             /*
-            for (int i = 1; i < ar.length; i++) {
+            for (int i = 0; i < ar.length-1; i++) {
                 ar2[i] = ar[i];
             }
             */

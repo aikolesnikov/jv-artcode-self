@@ -2,11 +2,13 @@ package week_2;
 
 import utilities.Input;
 import utilities.Output;
+import utilities.Process;
+
 
 /**
- * Посчитать сколько цифр(цифра задается пользователем) в массиве
+ * Найти среднее арифметическое массива
  */
-public class Task_2_04 {
+public class Task_2_05 {
 
     public static void main(String[] args) {
 
@@ -15,19 +17,12 @@ public class Task_2_04 {
         if (size > 0) {
             int rangeFrom = Input.inputInt("Values from?: ");
             int rangeTo = Input.inputInt("Values to?: ");
-            int lookFor = Input.inputInt("Look for?: ");
 
             int[] ar = Input.generateIntAr(size, rangeFrom, rangeTo);
             System.out.println("Array:");
             Output.printArray(ar);
 
-            int found = 0;
-
-            for (int i = 0; i < ar.length-1; i++) {
-                if (ar[i] == lookFor) found++;
-            }
-
-            System.out.println(lookFor + " is found " + found + " times.");
+            System.out.println("Average is: " + ((double)Process.sumIntAr(ar))/ar.length);
         } else {
            System.out.println("Size must be > 0 !");
         }

@@ -26,7 +26,7 @@ public class Task_2_02 {
             int max = ar[0];
             int maxPos = 0;
 
-            for (int i = 1; i < ar.length; i++) {
+            for (int i = 0; i < ar.length-1; i++) {
                 if (ar[i] < min) {
                     min = ar[i];
                     minPos = i;

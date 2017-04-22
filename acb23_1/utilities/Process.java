@@ -18,5 +18,15 @@ public class Process {
 
         return indexOfMinValue;
     }
+
+    public static int sumIntAr(int[] ar) {
+        int sum=0;
+
+        for (int i: ar) {
+            sum += ar[i];
+        }
+
+        return sum;
+    }
 }
 
