@@ -22,6 +22,9 @@ public class Task_2_05 {
             System.out.println("Array:");
             Output.printArray(ar);
 
+            System.out.println("sum is: " + Process.sumIntAr(ar));
+            System.out.println("lenght is: " + ar.length);
+
             System.out.println("Average is: " + ((double)Process.sumIntAr(ar))/ar.length);
         } else {
            System.out.println("Size must be > 0 !");

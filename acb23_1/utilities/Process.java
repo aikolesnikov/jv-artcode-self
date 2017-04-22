@@ -20,12 +20,15 @@ public class Process {
     }
 
     public static int sumIntAr(int[] ar) {
-        int sum=0;
+        int sum = 0;
 
-        for (int i: ar) {
+        // for (int i : ar) {
+        // sum += ar[i];
+        //}
+
+        for (int i = 0; i < ar.length - 1; i++) {
             sum += ar[i];
         }
-
         return sum;
     }
 }
