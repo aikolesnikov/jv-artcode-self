@@ -8,7 +8,7 @@ import utilities.Process;
 /**
  * Найти среднее арифметическое массива
  */
-public class Task_2_05 {
+public class Task_2_06 {
 
     public static void main(String[] args) {
 
