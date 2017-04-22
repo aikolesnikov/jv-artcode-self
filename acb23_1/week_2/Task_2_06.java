@@ -19,8 +19,7 @@ public class Task_2_06 {
             int rangeTo = Input.inputInt("Values to?: ");
 
             int[] ar = Input.generateIntAr(size, rangeFrom, rangeTo);
-            System.out.println("Array:");
-            Output.printArray(ar);
+            Output.printArray("Array:",ar);
 
             System.out.println("sum is: " + Process.sumIntAr(ar));
             System.out.println("lenght is: " + ar.length);

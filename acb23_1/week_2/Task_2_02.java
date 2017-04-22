@@ -18,8 +18,7 @@ public class Task_2_02 {
 
             int[] ar = Input.generateIntAr(size, rangeFrom, rangeTo);
 
-            System.out.println("Array before changing:");
-            Output.printArray(ar);
+            Output.printArray("Array before changing:",ar);
 
             int min = ar[0];
             int minPos = 0;
@@ -47,7 +46,7 @@ public class Task_2_02 {
             }
 
             System.out.println("Array after changing:");
-            Output.printArray(ar);
+            Output.printArray("",ar);
 
         } else {
             System.out.println("Size must be > 0 !");

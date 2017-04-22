@@ -19,7 +19,7 @@ public class Task_2_002 {
         System.out.print("Size?:");
         int[] ar = Input.generateIntAr(in.nextInt(), 0, 20);
 
-        Output.printArray(ar);
+        Output.printArray("",ar);
         Process.findMin(ar);
 
         // int ind = findMin(ar);

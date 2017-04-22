@@ -29,7 +29,7 @@ public class Task_2_003 {
 
         int ar[] = Input.generateIntAr(size, min, max);
         int minValueIndex = Process.findMin(ar);
-        Output.printArray(ar);
+        Output.printArray("",ar);
 
         System.out.println(minValueIndex);
         System.out.println(ar[minValueIndex]);
@@ -43,7 +43,7 @@ public class Task_2_003 {
             }
             int numberValue = Integer.valueOf(value);
             ar[minValueIndex] = numberValue;
-            Output.printArray(ar);
+            Output.printArray("",ar);
         }
     }
 

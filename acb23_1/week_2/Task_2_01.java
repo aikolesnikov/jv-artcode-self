@@ -17,7 +17,7 @@ public class Task_2_01 {
             int rangeTo = Input.inputInt("Values to?: ");
 
             int[] ar = Input.generateIntAr(size, rangeFrom, rangeTo);
-            Output.printArray(ar);
+            Output.printArray("",ar);
 
             int min = ar[0];
             int max = ar[0];

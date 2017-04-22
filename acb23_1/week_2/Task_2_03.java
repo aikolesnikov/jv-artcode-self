@@ -19,9 +19,9 @@ public class Task_2_03 {
             int[] ar = Input.generateIntAr(size, rangeFrom, rangeTo);
             int[] ar2 = new int[size];
             System.out.println("First array:");
-            Output.printArray(ar);
+            Output.printArray("",ar);
             System.out.println("Second array:");
-            Output.printArray(ar2);
+            Output.printArray("",ar2);
 
             System.arraycopy(ar, 1, ar2, 1, ar.length - 1);
 
@@ -31,7 +31,7 @@ public class Task_2_03 {
             }
             */
             System.out.println("Second array after copying:");
-            Output.printArray(ar2);
+            Output.printArray("",ar2);
         } else {
             System.out.println("Size must be > 0 !");
         }

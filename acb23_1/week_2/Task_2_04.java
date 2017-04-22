@@ -18,8 +18,7 @@ public class Task_2_04 {
             int lookFor = Input.inputInt("Look for?: ");
 
             int[] ar = Input.generateIntAr(size, rangeFrom, rangeTo);
-            System.out.println("Array:");
-            Output.printArray(ar);
+            Output.printArray("Array:", ar);
 
             int found = 0;
 
