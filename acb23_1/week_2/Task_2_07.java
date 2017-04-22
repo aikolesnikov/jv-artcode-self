@@ -31,27 +31,36 @@ public class Task_2_07 {
         System.out.print("Left part: ");
         for (int i = 0; i < arMiddle + ar.length % 2; i++) {
             System.out.print(ar[i] + " ");
+            sumArPart1 += ar[i];
         }
         System.out.println();
 
         System.out.print("Right part: ");
         for (int i = 0; i < arMiddle + ar.length % 2; i++) {
             System.out.print(ar[arMiddle + i] + " ");
+            sumArPart2 += ar[arMiddle + i];
         }
         System.out.println();
 
-        for (int i = 0; i < arMiddle; i++) {
-            sumArPart1 += ar[i];
-            sumArPart2 += ar[arMiddle + i];
+        double avgS1=(double)sumArPart1/(arMiddle + ar.length % 2);
+        double avgS2=(double)sumArPart2/(arMiddle + ar.length % 2);
+
+        System.out.println("avg1=" + avgS1 + "; avg2=" + avgS2);
+        if (avgS1 >= avgS2) {
+            System.out.print("Left part is bigger: ");
+            for (int i = 0; i < arMiddle + ar.length % 2; i++) {
+                System.out.print(ar[i] + " ");
+                sumArPart1 += ar[i];
+            }
+        } else{
+            System.out.print("Right part is bigger: ");
+            for (int i = 0; i < arMiddle + ar.length % 2; i++) {
+                System.out.print(ar[arMiddle + i] + " ");
+                sumArPart2 += ar[arMiddle + i];
+            }
         }
 
-        System.out.println(sumArPart1 + " " + sumArPart2);
-        if (sumArPart1 > sumArPart2) {
-            System.out.println("Left part is bigger:");
-        }
-
-        // System.out.println("Average is: " + ((double) Process.sumIntAr(ar)) / ar.length);
-
+        System.out.println();
     }
 
 }
