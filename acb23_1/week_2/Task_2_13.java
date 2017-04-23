@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Посчитать колличество букв 'a' в строке (искомый символ может быть разным)
  */
 
-public class Task_2_12 {
+public class Task_2_13 {
 
     public static void main(String[] args) {
 
@@ -20,12 +20,13 @@ public class Task_2_12 {
         System.out.print("Enter some char: ");
         c = input.next().trim().charAt(0);
 
-        System.out.println("Your string is: " + s);
-        System.out.println("Your char is: " + c);
-
-        for ( int i = 0; i<s.length(); i++){
-            System.out.println(s.charAt(i));
+        int qtyC = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == c) qtyC++;
         }
+
+        System.out.println("There are " + qtyC + " chars '" + c +
+                            "' in the string \"" + s + "\".");
 
     }
 
