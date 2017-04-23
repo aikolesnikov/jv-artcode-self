@@ -28,5 +28,4 @@ public class Task_2_15 {
         System.out.println("Initial string:" + s);
         System.out.println("Updated string:" + s.replace(cToReplace, cByReplace));
     }
-
 }
