@@ -40,7 +40,7 @@ public class Task3_006 {
 
         int filterProperty = 0;
         for (int i=0; i<m[1].length; i++){
-            if (m[1][i].equals(prop){
+            if (m[1][i].equals(prop)){
                 filterProperty=i;
                 break;
             }
@@ -58,7 +58,7 @@ public class Task3_006 {
 
         filterX=0;
         for (int i=0; i<m.length; i++){
-            if (Integer.parseInt(m[i][5]) >= salMin && Integer.parseInt(m[i][5])<=salMax){
+            if (Integer.parseInt(m[i][5]) >= pMin && Integer.parseInt(m[i][5])<=pMax){
                 mFilter[filterX++] = m[i];
             }
         }

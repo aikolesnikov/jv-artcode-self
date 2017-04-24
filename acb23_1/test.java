@@ -10,7 +10,7 @@ public class test {
             return str;
         }
 
-        return str = "not " + str;
+        return "not " + str;
     }
 
 
@@ -29,9 +29,15 @@ public class test {
 
 
     public static void main(String[] args) {
-        String s = "not abc";
+        String s = "hi there";
         // System.out.println((notString("not abc")));
-        System.out.println(deleteSymbolInside(s, 'a'));
+        // System.out.println(deleteSymbolInside(s, 'a'));
+
+        System.out.println(s.length());
+
+        System.out.println(s.substring(0,2).equals("hi"));
+
+
     }
 }
 
