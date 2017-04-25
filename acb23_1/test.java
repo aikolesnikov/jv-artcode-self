@@ -27,15 +27,36 @@ public class test {
         return str;
     }
 
+    private static String startOz(String str) {
+
+        if (str.length()==0) return str;
+        if (str.length()==1){
+            if (str.charAt(0)=='o') return str;
+            if (str.charAt(0)=='z') return str;
+            return "";
+        }
+
+        if (str.charAt(1)=='z') {
+            if (str.charAt(0)=='o') return "oz";
+            else return "z";
+        }
+        if (str.charAt(0)=='o'){
+            return "o";
+        }
+
+        return "";
+    }
+
 
     public static void main(String[] args) {
         String s = "hi there";
         // System.out.println((notString("not abc")));
         // System.out.println(deleteSymbolInside(s, 'a'));
 
-        System.out.println(s.length());
+        // System.out.println(s.length());
+        // System.out.println(s.substring(0,2).equals("hi"));
 
-        System.out.println(s.substring(0,2).equals("hi"));
+        System.out.println(startOz("a"));
 
 
     }
