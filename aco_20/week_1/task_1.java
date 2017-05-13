@@ -3,20 +3,32 @@
  */
 public class task_1 {
 
-    public static class Student{
+    public static class Student {
         String name;
         String surname;
         int age;
 
-        Student(){}
+        Student() {
+        }
+
+
+        Student(String name, String surname, int age) {
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+        }
+
+
     }
 
     public static void main(String[] args) {
         Student s1 = new Student();
+        s1.name = "Yaaa";
 
-        s1.name = "Yaa";
+        Student s2 = new Student("BB", "Bbbbb", 23);
 
         System.out.println(s1.name);
+        System.out.println(s2.age);
 
     }
 }
