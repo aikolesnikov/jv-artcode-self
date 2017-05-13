@@ -18,7 +18,6 @@ public class task_1 {
             this.age = age;
         }
 
-
     }
 
     public static void main(String[] args) {
