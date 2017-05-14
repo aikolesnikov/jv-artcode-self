@@ -2,45 +2,48 @@
  *  Created by kaim on 5/14/17.
  */
 public class Student {
+    private int id;
     private String name;
     private String surname;
     private int age;
 
-    public String getName() {
-        return name;
+    public void setId(int id) {
+        this.id = id;
     }
-
-    public void setName(String name) {
+    public int getId(){
+        return id;
+    }
+    void setName(String name) {
         this.name = name;
     }
-
-    public String getSurname() {
-        return surname;
+    String getName() {
+        return name;
     }
-
     public void setSurname(String surname) {
         this.surname = surname;
     }
-
-    public int getAge() {
-        return age;
+    private String getSurname() {
+        return surname;
     }
-
     public void setAge(int age) {
         this.age = age;
     }
-
-    public String stPrint() {
-            return ("Student name: " + name + " " + surname + ", " + age + " years.");
-        }
-
-        Student() {
-        }
-
-        Student(String name, String surname, int age) {
-            this.name = name;
-            this.surname = surname;
-            this.age = age;
-        }
+    private int getAge() {
+        return age;
     }
+
+    Student() {
+    }
+    Student(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+
+    String Print() {
+        return ("Student name: " + this.getName() + " " + this.getSurname() + ", " + this.getAge()
+                + " years.");
+    }
+
+}
 

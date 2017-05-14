@@ -2,29 +2,42 @@
  *  Created by kaim on 5/14/17.
  */
 public class Group {
-    int groupNumber;
-    int groupSize;
-    Student[] students;
 
-    Group(int num, Student[] students) {
-        this.groupNumber = num;
-        this.students = students;
-        this.groupSize = students.length;
+    private int groupNumber;
+    private int groupSize;
+    private Student[] students;
+
+    private void setGroupNumber(int groupNumber) {
+        this.groupNumber = groupNumber;
+    }
+    public int getGroupNumber() {
+        return groupNumber;
+    }
+    private void setGroupSize(int groupSize) {
+        this.groupSize = groupSize;
+    }
+    public int getGroupSize() {
+        return groupSize;
     }
 
+    Group(int num, Student[] students) {
+        this.setGroupNumber(num);
+        this.setGroupSize(students.length);
+        this.students = students;
+    }
     Group(int num, int groupSize) {
-        this.groupNumber = num;
-        this.groupSize = groupSize;
+        this.setGroupNumber(num);
+        this.setGroupSize(groupSize);
         this.students = new Student[this.groupSize];
     }
 
-    boolean addStudent(int groupNumber, Student student) {
+    boolean addStudent(Student student) {
 
         if (student == null) return false;
 
         for (int i = 0; i < this.groupSize; i++) {
             if (this.students[i] == null) {
-                //this.groupSize++;
+                this.groupSize++;
                 this.students[i]=student;
                 return true;
             }
@@ -32,14 +45,13 @@ public class Group {
 
         return false;
     }
-
-    String printGroup() {
+    String Print() {
 
         String info = "";
 
         for (int i = 0; i < this.groupSize; i++) {
             if (!(students[i] == null)){
-                info += students[i].stPrint();
+                info += students[i].Print();
                 info += ";\n ";
             }
         }
