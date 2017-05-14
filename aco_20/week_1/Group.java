@@ -1,5 +1,5 @@
 /**
- * Created by kaim on 5/14/17.
+ *  Created by kaim on 5/14/17.
  */
 public class Group {
     int groupNumber;
@@ -19,11 +19,15 @@ public class Group {
     }
 
     String printGroup() {
+
+        String info = "";
+
         for (int i = 0; i < this.groupSize; i++) {
-            System.out.println(this.students[i].name);
+            info += students[i].stPrint();
+            info += ";\n ";
         }
 
-        return null;
+        return info;
     }
 
 
