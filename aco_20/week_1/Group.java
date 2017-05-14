@@ -18,6 +18,20 @@ public class Group {
         this.students = new Student[this.groupSize];
     }
 
+    boolean addStudent(int groupNumber, Student student) {
+
+        if (student.equals(null)) return false;
+
+        for (int i = 0; i < this.groupSize; i++) {
+            if (this.students[i].equals(null)) {
+                this.students[i]=student;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     String printGroup() {
 
         String info = "";
@@ -29,7 +43,6 @@ public class Group {
 
         return info;
     }
-
 
 }
 
