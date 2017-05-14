@@ -29,5 +29,7 @@ public class task_2 {
         if (gr2.addStudent(2, st4))
             System.out.println(gr2.printGroup());
 
+
+
     }
 }
