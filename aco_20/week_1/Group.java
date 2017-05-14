@@ -20,10 +20,11 @@ public class Group {
 
     boolean addStudent(int groupNumber, Student student) {
 
-        if (student.equals(null)) return false;
+        if (student == null) return false;
 
         for (int i = 0; i < this.groupSize; i++) {
-            if (this.students[i].equals(null)) {
+            if (this.students[i] == null) {
+                //this.groupSize++;
                 this.students[i]=student;
                 return true;
             }
@@ -37,10 +38,11 @@ public class Group {
         String info = "";
 
         for (int i = 0; i < this.groupSize; i++) {
-            info += students[i].stPrint();
-            info += ";\n ";
+            if (!(students[i] == null)){
+                info += students[i].stPrint();
+                info += ";\n ";
+            }
         }
-
         return info;
     }
 

@@ -21,8 +21,13 @@ public class task_2 {
         Student[] st = new Student[] {st1, st2, st3};
 
         Group gr1 = new Group(1, st);
-        Group gr2 = new Group(1, 5);
+        Group gr2 = new Group(1, 6);
 
         System.out.println(gr1.printGroup());
+
+        Student st4 = new Student("Name4", "Sur4", 44);
+        if (gr2.addStudent(2, st4))
+            System.out.println(gr2.printGroup());
+
     }
 }
