@@ -29,18 +29,18 @@ public class test {
 
     private static String startOz(String str) {
 
-        if (str.length()==0) return str;
-        if (str.length()==1){
-            if (str.charAt(0)=='o') return str;
-            if (str.charAt(0)=='z') return str;
+        if (str.length() == 0) return str;
+        if (str.length() == 1) {
+            if (str.charAt(0) == 'o') return str;
+            if (str.charAt(0) == 'z') return str;
             return "";
         }
 
-        if (str.charAt(1)=='z') {
-            if (str.charAt(0)=='o') return "oz";
+        if (str.charAt(1) == 'z') {
+            if (str.charAt(0) == 'o') return "oz";
             else return "z";
         }
-        if (str.charAt(0)=='o'){
+        if (str.charAt(0) == 'o') {
             return "o";
         }
 
@@ -48,17 +48,57 @@ public class test {
     }
 
 
+    public static int last2(String str) {
+        if (str.length()<2) return 0;
+
+        String sS = str.substring(
+                str.length()-2,str.length()
+        );
+        int sCount = 0;
+
+        for (int i=0; i<str.length()-2; i++) {
+            if  (str.substring(i,i+2).equals(sS)) sCount++;
+        }
+
+        return sCount;
+    }
+
+    public static boolean noTriples(int[] nums) {
+
+        if (nums.length<3) return true;
+
+        for (int i=0; i<nums.length-3; i++){
+            if
+                    ((nums[i]==nums[i+1])
+                    &&
+                    (nums[i+1]==nums[i+2])
+                    )
+                return false;
+        }
+
+        return true;
+    }
+
+
+    private static int stringMatch(String a, String b) {
+
+        if (a.length()<=1||a.length()<=1) return 0;
+
+        int match = 0;
+        int n = a.length()<b.length()?a.length():b.length();
+
+        for (int i=0; i<n; i++){
+            if (a.substring(i,i+1).equals(b.substring(i,i+1))) match++;
+        }
+
+        return match;
+    }
+
+
+
     public static void main(String[] args) {
-        String s = "hi there";
-        // System.out.println((notString("not abc")));
-        // System.out.println(deleteSymbolInside(s, 'a'));
 
-        // System.out.println(s.length());
-        // System.out.println(s.substring(0,2).equals("hi"));
-
-        System.out.println(startOz("a"));
-
-
+        System.out.println(stringMatch("xxcaazz", "xxbaaz"));
     }
 }
 
