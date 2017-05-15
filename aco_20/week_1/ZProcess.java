@@ -1,3 +1,4 @@
+import java.util.logging.Logger;
 
 /**
  *   Created by kaim on 5/14/17.
@@ -28,6 +29,9 @@ public class ZProcess {
         Student st4 = new Student("Name4", "Sur4", 44);
         if (gr1.addStudent(st4))
             System.out.println(gr1.Print());
+
+        Logger l = Logger.getLogger("ZProcess");
+        l.info("Olala");
 
 
     }
