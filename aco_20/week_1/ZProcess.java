@@ -7,6 +7,8 @@ public class ZProcess {
 
     public static void main(String[] args) {
 
+        Logger l = Logger.getLogger("ZProcess");
+
         Student s1 = new Student();
         s1.setName("Yaaa");
 
@@ -24,15 +26,12 @@ public class ZProcess {
         Group gr1 = new Group(1, st);
         Group gr2 = new Group(1, 6);
 
-        System.out.println(gr1.Print());
+        // System.out.println(gr1.Print());
+        l.info(gr1.Print());
 
         Student st4 = new Student("Name4", "Sur4", 44);
         if (gr1.addStudent(st4))
             System.out.println(gr1.Print());
-
-        Logger l = Logger.getLogger("ZProcess");
-        l.info("Olala");
-
 
     }
 }
