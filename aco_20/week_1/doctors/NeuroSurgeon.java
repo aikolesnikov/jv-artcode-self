@@ -19,7 +19,6 @@ public class NeuroSurgeon extends Surgeon {
         }
     }
 
-
     @Override
     public String specialization() {
         Scanner sc = new Scanner(System.in);
