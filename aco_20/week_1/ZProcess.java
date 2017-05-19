@@ -31,7 +31,7 @@ public class ZProcess {
 
         Student st4 = new Student("Name4", "Sur4", 44);
         if (gr1.addStudent(st4))
-            System.out.println(gr1.Print());
+            System.out.println("added");
 
     }
 }
