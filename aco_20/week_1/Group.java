@@ -7,32 +7,28 @@ class Group {
     private int groupSize;
     private Student[] students;
 
-    private void setGroupNumber(int groupNumber) {
-        this.groupNumber = groupNumber;
-    }
-
-    public int getGroupNumber() {
-        return groupNumber;
-    }
-
-    private void setGroupSize(int groupSize) {
-        this.groupSize = groupSize;
-    }
-
-    public int getGroupSize() {
-        return groupSize;
-    }
-
     Group(int num, Student[] students) {
         this.setGroupNumber(num);
         this.setGroupSize(students.length);
         this.students = students;
     }
-
     Group(int num, int groupSize) {
         this.setGroupNumber(num);
         this.setGroupSize(groupSize);
         this.students = new Student[this.groupSize];
+    }
+
+    private void setGroupNumber(int groupNumber) {
+        this.groupNumber = groupNumber;
+    }
+    public int getGroupNumber() {
+        return groupNumber;
+    }
+    private void setGroupSize(int groupSize) {
+        this.groupSize = groupSize;
+    }
+    public int getGroupSize() {
+        return groupSize;
     }
 
     boolean addStudent(Student student) {
@@ -50,8 +46,50 @@ class Group {
         return false;
     }
 
+    boolean editStudent(int studentId) {
+
+        if (studentId == 0) return false;
+
+        for (int i = 0; i < this.groupSize; i++) {
+            if (this.students[i] == null) {
+                this.groupSize++;
+                // this.students[i] = student;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    boolean deleteStudent(int studentId) {
+
+        if (studentId == 0) return false;
+
+        for (int i = 0; i < this.groupSize; i++) {
+            if (this.students[i] == null) {
+                this.groupSize++;
+                // this.students[i] = " ";
+                return true;
+            }
+        }
+
+        return true;
+    }
+
     String print() {
 
+        String info = "";
+
+        for (int i = 0; i < this.groupSize; i++) {
+            if (!(students[i] == null)) {
+                info += students[i].print();
+                info += ";\n ";
+            }
+        }
+        return info;
+    }
+
+    String sort(){
         String info = "";
 
         for (int i = 0; i < this.groupSize; i++) {

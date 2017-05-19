@@ -13,8 +13,8 @@ class University {
 
         Student s2 = new Student("BB", "Bbbbb", 23);
 
-        System.out.println(s1.getName());
-        s2.print();
+        // System.out.println(s1.getName());
+        // s2.print();
 
         Student st1 = new Student("Name1", "Sur1", 11);
         Student st2 = new Student("Name2", "Sur2", 22);
