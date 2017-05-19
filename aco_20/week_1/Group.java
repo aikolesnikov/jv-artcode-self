@@ -50,13 +50,13 @@ class Group {
         return false;
     }
 
-    String Print() {
+    String print() {
 
         String info = "";
 
         for (int i = 0; i < this.groupSize; i++) {
             if (!(students[i] == null)) {
-                info += students[i].Print();
+                info += students[i].print();
                 info += ";\n ";
             }
         }

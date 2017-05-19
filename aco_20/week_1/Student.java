@@ -1,11 +1,20 @@
 /**
  *  Created by kaim on 5/14/17.
  */
-public class Student {
+class Student {
     private int id;
     private String name;
     private String surname;
     private int age;
+
+    Student() {
+    }
+
+    Student(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -32,15 +41,7 @@ public class Student {
         return age;
     }
 
-    Student() {
-    }
-    Student(String name, String surname, int age) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-    }
-
-    String Print() {
+    String print() {
         return ("Student name: " + this.getName() + " " + this.getSurname() + ", " + this.getAge()
                 + " years.");
     }
