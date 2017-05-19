@@ -1,23 +1,22 @@
 package books;
 
 /**
- * vocabulary
+ * Enc extends Book
  */
-public class Directory extends Book implements IEditable {
+class Encyclopedia extends Book implements IEditable {
     String name;
-    String theme;
-    private static final int minOrder = 1000;
+    private static final int minOrder = 10000;
     private static final int defaultYear = 2017;
 
     @Override
     int publish() {
-        System.out.println("Vocabulary has been published.");
+        System.out.println("Encyclopedia has been published.");
         return 1;
     }
 
     @Override
     boolean print() {
-        System.out.println("Vocabulary has been printed.");
+        System.out.println("Encyclopedia has been printed.");
         return true;
     }
 
@@ -32,7 +31,6 @@ public class Directory extends Book implements IEditable {
     }
 
     public String PublishHouse(String pHouse) {
-        return "Directory is published in " + pHouse;
+        return "Encyclopedia is published in " + pHouse;
     }
 }
-
