@@ -5,6 +5,42 @@ import java.util.logging.Logger;
  */
 class University {
 
+    private int Id;
+    private String name;
+    private Group[] groups;
+    private int grQty;
+
+    public int getId() {
+        return Id;
+    }
+    private void setId(int id) {
+        Id = id;
+    }
+    public Group[] getGroups() {
+        return groups;
+    }
+    public String getName() {
+        return name;
+    }
+    private void setName(String name) {
+        this.name = name;
+    }
+    public void setGroups(Group[] groups) {
+        this.groups = groups;
+    }
+    public int getGrQty() {
+        return grQty;
+    }
+    public void setGrQty(int grQty) {
+        this.grQty = grQty;
+    }
+
+    University(int id, String name){
+        this.setId(id);
+        this.setName(name);
+        // this.setGroups(new Student[]);
+    }
+
     boolean init (){
         Logger l = Logger.getLogger("University");
 
@@ -20,13 +56,9 @@ class University {
         Student[] st = new Student[] {st1, st2, st3};
 
         Group gr1 = new Group(1, 5);
-        // Group gr2 = new Group(1, 6);
-
-        // System.out.println(gr1.Print());
-        // l.info(gr1.print());
 
         if (gr1.addStudent(st4))
-            System.out.println("added");
+            System.out.println(gr1.print());
 
         l.info("Univer has been initialized");
 

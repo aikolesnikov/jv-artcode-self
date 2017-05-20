@@ -8,7 +8,7 @@ class Group {
     private Student[] students;
     private int stQty;
 
-    public int getGroupId() {
+    private int getGroupId() {
         return groupId;
     }
     private void setGroupId(int groupId) {
@@ -23,7 +23,7 @@ class Group {
     public Student[] getStudents() {
         return students;
     }
-    public void setStudents(Student[] students) {
+    private void setStudents(Student[] students) {
         this.students = students;
     }
     private int getStQty() {
@@ -36,10 +36,9 @@ class Group {
     Group(int groupId, int groupSize) {
         this.setGroupId(groupId);
         this.setGroupSize(groupSize);
-        this.students = new Student[this.groupSize];
+        this.setStudents(new Student[this.groupSize]);
         this.setStQty(0);
     }
-
 
     boolean addStudent(Student student) {
 
@@ -48,14 +47,16 @@ class Group {
         if (student == null) return false;
         if (stQ==this.getGroupSize()) {
             System.out.println("Group limit is exceeded. Student " + student.getName() +
-            " has not been added");
+            " has not been added.\n");
             return false;
         }
 
-        this.students[stQty] = student;
-        this.setStQty(stQ++);
+        this.students[stQty++] = student;
+        this.setStQty(stQ);
+        System.out.println("Student " + student.getName() +
+                " has been added into group " + this.getGroupId() + ".\n");
 
-        return false;
+        return true;
     }
 
     boolean editStudent(int studentId) {
@@ -89,7 +90,7 @@ class Group {
 
     String print() {
 
-        String info = "";
+        String info = "Group " + this.getGroupId() + ":\n";
 
         for (int i = 0; i < this.groupSize; i++) {
             if (!(students[i] == null)) {
@@ -99,6 +100,7 @@ class Group {
         }
         return info;
     }
+
     String sort() {
         return "sort";
     }
