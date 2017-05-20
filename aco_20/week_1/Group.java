@@ -8,27 +8,34 @@ class Group {
     private Student[] students;
     private int stQty;
 
-    private int getGroupId() {
+    int getGroupId() {
         return groupId;
     }
+
     private void setGroupId(int groupId) {
         this.groupId = groupId;
     }
+
     private int getGroupSize() {
         return groupSize;
     }
+
     private void setGroupSize(int groupSize) {
         this.groupSize = groupSize;
     }
+
     public Student[] getStudents() {
         return students;
     }
+
     private void setStudents(Student[] students) {
         this.students = students;
     }
-    private int getStQty() {
+
+    int getStQty() {
         return stQty;
     }
+
     private void setStQty(int stQty) {
         this.stQty = stQty;
     }
@@ -45,45 +52,25 @@ class Group {
         int stQ = this.getStQty();
 
         if (student == null) return false;
-        if (stQ==this.getGroupSize()) {
+        if (stQ == this.getGroupSize()) {
             System.out.println("Group limit is exceeded. Student " + student.getName() +
-            " has not been added.\n");
+                    " has not been added.\n");
             return false;
         }
 
         this.students[stQty++] = student;
-        this.setStQty(stQ);
+        System.out.println(this.getStQty());
         System.out.println("Student " + student.getName() +
                 " has been added into group " + this.getGroupId() + ".\n");
-
         return true;
     }
 
     boolean editStudent(int studentId) {
 
-        if (studentId == 0) return false;
-
-        for (int i = 0; i < this.groupSize; i++) {
-            if (this.students[i] == null) {
-                this.groupSize++;
-                // this.students[i] = student;
-                return true;
-            }
-        }
-
         return false;
     }
+
     boolean deleteStudent(int studentId) {
-
-        if (studentId == 0) return false;
-
-        for (int i = 0; i < this.groupSize; i++) {
-            if (this.students[i] == null) {
-                this.groupSize++;
-                // this.students[i] = " ";
-                return true;
-            }
-        }
 
         return true;
     }
