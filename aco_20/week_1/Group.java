@@ -3,45 +3,57 @@
  */
 class Group {
 
-    private int groupNumber;
+    private int groupId;
     private int groupSize;
     private Student[] students;
+    private int stQty;
 
-    Group(int num, Student[] students) {
-        this.setGroupNumber(num);
-        this.setGroupSize(students.length);
-        this.students = students;
+    public int getGroupId() {
+        return groupId;
     }
-    Group(int num, int groupSize) {
-        this.setGroupNumber(num);
-        this.setGroupSize(groupSize);
-        this.students = new Student[this.groupSize];
+    private void setGroupId(int groupId) {
+        this.groupId = groupId;
     }
-
-    private void setGroupNumber(int groupNumber) {
-        this.groupNumber = groupNumber;
-    }
-    public int getGroupNumber() {
-        return groupNumber;
+    private int getGroupSize() {
+        return groupSize;
     }
     private void setGroupSize(int groupSize) {
         this.groupSize = groupSize;
     }
-    public int getGroupSize() {
-        return groupSize;
+    public Student[] getStudents() {
+        return students;
     }
+    public void setStudents(Student[] students) {
+        this.students = students;
+    }
+    private int getStQty() {
+        return stQty;
+    }
+    private void setStQty(int stQty) {
+        this.stQty = stQty;
+    }
+
+    Group(int groupId, int groupSize) {
+        this.setGroupId(groupId);
+        this.setGroupSize(groupSize);
+        this.students = new Student[this.groupSize];
+        this.setStQty(0);
+    }
+
 
     boolean addStudent(Student student) {
 
-        if (student == null) return false;
+        int stQ = this.getStQty();
 
-        for (int i = 0; i < this.groupSize; i++) {
-            if (this.students[i] == null) {
-                this.groupSize++;
-                this.students[i] = student;
-                return true;
-            }
+        if (student == null) return false;
+        if (stQ==this.getGroupSize()) {
+            System.out.println("Group limit is exceeded. Student " + student.getName() +
+            " has not been added");
+            return false;
         }
+
+        this.students[stQty] = student;
+        this.setStQty(stQ++);
 
         return false;
     }
@@ -60,7 +72,6 @@ class Group {
 
         return false;
     }
-
     boolean deleteStudent(int studentId) {
 
         if (studentId == 0) return false;
@@ -88,18 +99,18 @@ class Group {
         }
         return info;
     }
-
-    String sort(){
-        String info = "";
-
-        for (int i = 0; i < this.groupSize; i++) {
-            if (!(students[i] == null)) {
-                info += students[i].print();
-                info += ";\n ";
-            }
-        }
-        return info;
+    String sort() {
+        return "sort";
     }
 
 }
 
+
+// old second constructor
+/*
+    Group(int num, Student[] students) {
+        this.setGroupId(num);
+        this.setGroupSize(students.length);
+        this.students = students;
+    }
+    */
