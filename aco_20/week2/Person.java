@@ -5,7 +5,7 @@ import javax.print.DocFlavor;
 /**
  *  Created by kaim on 5/20/17.
  */
-public class Person {
+public abstract class Person {
     private String name;
     private String surname;
     private String middlename;

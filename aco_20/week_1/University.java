@@ -10,10 +10,10 @@ class University {
     private int unSize;
     private Group[] groups;
     private int grQty;
+
     public int getId() {
         return Id;
     }
-
     private void setId(int id) {
         Id = id;
     }
