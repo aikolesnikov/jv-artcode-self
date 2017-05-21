@@ -49,15 +49,15 @@ public class test {
 
 
     public static int last2(String str) {
-        if (str.length()<2) return 0;
+        if (str.length() < 2) return 0;
 
         String sS = str.substring(
-                str.length()-2,str.length()
+                str.length() - 2, str.length()
         );
         int sCount = 0;
 
-        for (int i=0; i<str.length()-2; i++) {
-            if  (str.substring(i,i+2).equals(sS)) sCount++;
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.substring(i, i + 2).equals(sS)) sCount++;
         }
 
         return sCount;
@@ -65,13 +65,13 @@ public class test {
 
     public static boolean noTriples(int[] nums) {
 
-        if (nums.length<3) return true;
+        if (nums.length < 3) return true;
 
-        for (int i=0; i<nums.length-3; i++){
+        for (int i = 0; i < nums.length - 3; i++) {
             if
-                    ((nums[i]==nums[i+1])
+                    ((nums[i] == nums[i + 1])
                     &&
-                    (nums[i+1]==nums[i+2])
+                    (nums[i + 1] == nums[i + 2])
                     )
                 return false;
         }
@@ -82,18 +82,17 @@ public class test {
 
     private static int stringMatch(String a, String b) {
 
-        if (a.length()<=1||a.length()<=1) return 0;
+        if (a.length() <= 1 || a.length() <= 1) return 0;
 
         int match = 0;
-        int n = a.length()<b.length()?a.length():b.length();
+        int n = a.length() < b.length() ? a.length() : b.length();
 
-        for (int i=0; i<n; i++){
-            if (a.substring(i,i+1).equals(b.substring(i,i+1))) match++;
+        for (int i = 0; i < n; i++) {
+            if (a.substring(i, i + 1).equals(b.substring(i, i + 1))) match++;
         }
 
         return match;
     }
-
 
 
     public static void main(String[] args) {

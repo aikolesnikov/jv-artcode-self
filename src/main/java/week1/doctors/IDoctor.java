@@ -3,11 +3,6 @@ package week1.doctors;
 /**
  * initial
  */
-interface IDoctor {
-    String name = "";
-    int age = 0;
-    boolean hasScinceDegry = false;
-
+public interface IDoctor {
     String specialization();
-
 }

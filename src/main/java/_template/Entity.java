@@ -5,15 +5,18 @@ package _template;
  */
 public class Entity{
 
+    private int id;
     private String name;
+    private int size;
+    private Entity[] sub;
+    private int qty;
 
     public String getName() {
-        return name;
+        return this.name;
     }
     public void setName(String name) {
         this.name = name;
     }
 
     public Entity(String name){this.setName(name);}
-
 }

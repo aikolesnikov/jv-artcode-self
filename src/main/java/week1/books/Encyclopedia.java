@@ -4,18 +4,17 @@ package week1.books;
  * Enc extends Book
  */
 class Encyclopedia extends Book implements IEditable {
-    String name;
     private static final int minOrder = 10000;
     private static final int defaultYear = 2017;
 
     @Override
-    int publish() {
+    public int publish() {
         System.out.println("Encyclopedia has been published.");
         return 1;
     }
 
     @Override
-    boolean print() {
+    public boolean print() {
         System.out.println("Encyclopedia has been printed.");
         return true;
     }

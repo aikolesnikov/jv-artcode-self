@@ -4,19 +4,25 @@ package week1.books;
  * vocabulary
  */
 public class Directory extends Book implements IEditable {
-    String name;
-    String theme;
+    private String theme;
     private static final int minOrder = 1000;
     private static final int defaultYear = 2017;
 
+    public String getTheme() {
+        return theme;
+    }
+    public void setTheme(String theme) {
+        this.theme = theme;
+    }
+
     @Override
-    int publish() {
+    public int publish() {
         System.out.println("Vocabulary has been published.");
         return 1;
     }
 
     @Override
-    boolean print() {
+    public boolean print() {
         System.out.println("Vocabulary has been printed.");
         return true;
     }
