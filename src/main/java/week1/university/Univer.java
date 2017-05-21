@@ -1,9 +1,11 @@
+package week1.university;
+
 import java.util.logging.Logger;
 
 /**
  *   Created by kaim on 5/14/17.
  */
-class University {
+class Univer {
 
     private int Id;
     private String name;
@@ -42,7 +44,7 @@ class University {
         this.grQty = grQty;
     }
 
-    University(int id, String name, int grSize){
+    Univer(int id, String name, int grSize){
         this.setId(id);
         this.setName(name);
         this.setUnSize(grSize);
@@ -56,21 +58,21 @@ class University {
 
         if (group == null) return false;
         if (grQty==this.getUnSize()) {
-            System.out.println("Groups' limit is exceeded. Group " + group.getGroupId() +
+            System.out.println("Groups' limit is exceeded. week1.university.Group " + group.getGroupId() +
                     " has not been added.\n");
             return false;
         }
 
         this.groups[grQty++] = group;
         this.setGrQty(grQty);
-        System.out.println("Group " + group.getGroupId() +
-                " has been added into university " + this.getName() + ".\n");
+        System.out.println("week1.university.Group " + group.getGroupId() +
+                " has been added into university " + this.getName() + "\n");
 
         return true;
     }
 
     boolean init (){
-        Logger l = Logger.getLogger("University");
+        Logger l = Logger.getLogger("week1.university.Univer");
 
         Group gr1 = new Group(1, 10);
         Group gr2 = new Group(2, 5);
@@ -93,6 +95,6 @@ class University {
 
 
 
-// Student s1 = new Student();
+// week1.university.Student s1 = new week1.university.Student();
 // s1.setName("Yaaa");
-// Student s2 = new Student("BB", "Bbbbb", 23);
+// week1.university.Student s2 = new week1.university.Student("BB", "Bbbbb", 23);

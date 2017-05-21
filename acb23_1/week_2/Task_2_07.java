@@ -1,7 +1,6 @@
 package week_2;
 
 import utilities.Output;
-import utilities.Process;
 
 import static utilities.Input.generateIntAr;
 import static utilities.Input.inputInt;

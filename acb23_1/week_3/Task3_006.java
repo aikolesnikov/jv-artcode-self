@@ -7,8 +7,8 @@
 //    private static void printMatrixS(String[][] m) {
 //        for (int i = 0; i < m.length; i++) {
 //            for (int j = 0; j < m[i].length; j++)
-//                System.out.print(m[i][j] + " ");
-//            System.out.println();
+//                Entity.out.print(m[i][j] + " ");
+//            Entity.out.println();
 //        }
 //    }
 //
@@ -76,13 +76,13 @@
 //                        {"John", "25", "6", "C++", "3", "1200"},
 //                };
 //
-//        System.out.println("Matrix initial:");
+//        Entity.out.println("Matrix initial:");
 //        printMatrixS(ms);
-//        System.out.println();
+//        Entity.out.println();
 //
-//        System.out.println();
+//        Entity.out.println();
 //
-//        System.out.println("Matrix filtered:");
+//        Entity.out.println("Matrix filtered:");
 //        printMatrixS(filterBySalary(ms, 900, 1100));
 //    }
 //}

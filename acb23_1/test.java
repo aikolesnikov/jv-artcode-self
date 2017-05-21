@@ -17,7 +17,7 @@ public class test {
     private static String deleteSymbolInside(String str, char c) {
 
         int i = str.indexOf(c);
-        // System.out.println(str.indexOf(c));
+        // Entity.out.println(str.indexOf(c));
 
         if (i >= 0) {
             str = str.substring(0, i) + str.substring(i + 1, str.length());

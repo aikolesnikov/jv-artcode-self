@@ -1,7 +1,5 @@
 package week_3;
 
-import utilities.Input;
-
 /**
  * matrix X элементы X[i][j]=1 if i==j
  */

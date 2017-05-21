@@ -13,7 +13,7 @@ public class Task_2_004 {
         String[] hellowWords = {"Hello", "Hi", "Bonjure", "Hola", "Привет", "Exit"};
 
         for (int i = 0; i < hellowWords.length; i++) {
-            System.out.println(i + 1 + ". Say " + hellowWords[i]+ ".");
+            System.out.println(i + 1 + ". Say " + hellowWords[i]+ "");
         }
         System.out.println();
 

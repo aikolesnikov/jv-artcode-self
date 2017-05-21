@@ -11,7 +11,7 @@ public class Task_10 {
 
     public static void main(String[] args) {
 
-        int i = 0, t = 0;
+        int i, t;
 
         i = inputInt("Input i:");
         t = i;
@@ -25,7 +25,7 @@ public class Task_10 {
         System.out.println(bnrS);
         System.out.print("Проверка: ");
         System.out.println(Integer.toBinaryString(i));
-        //System.out.println(Integer.parseInt(Integer.toBinaryString(i), 2));
+        //Entity.out.println(Integer.parseInt(Integer.toBinaryString(i), 2));
 
         Scanner in = new Scanner(System.in);
         System.out.print("Введите двоичное число: ");

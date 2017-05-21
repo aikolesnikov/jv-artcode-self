@@ -23,7 +23,7 @@ public class Task_2_002 {
         Process.findMin(ar);
 
         // int ind = findMin(ar);
-        // System.out.print("New elem?:");
+        // Entity.out.print("New elem?:");
         // in.nextInt();
     }
 }

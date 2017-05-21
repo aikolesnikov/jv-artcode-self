@@ -1,7 +1,7 @@
-package books;
+package week1.books;
 
 /**
- * interface for books
+ * interface for week1.books
  */
 interface IEditable {
     String PublishHouse(String pHouse);

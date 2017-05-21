@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Task_2_001 {
 
     public static void main(String[] args) {
-        // System.out.println(sayHelloS());
+        // Entity.out.println(sayHelloS());
 
         int[] arInt = new int[5];
 

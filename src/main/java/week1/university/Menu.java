@@ -1,3 +1,5 @@
+package week1.university;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -13,7 +15,7 @@ class Menu {
 
             System.out.println("1. Students.");
             System.out.println("2. Groups.");
-            System.out.println("3. University.");
+            System.out.println("3. week1.university.Univer.");
             System.out.println("4. Exit.");
 
             Scanner input = new Scanner(System.in);

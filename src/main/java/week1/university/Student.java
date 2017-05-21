@@ -1,3 +1,5 @@
+package week1.university;
+
 /**
  *  Created by kaim on 5/14/17.
  */
@@ -42,7 +44,7 @@ class Student {
     }
 
     String print() {
-        return ("Student name: " + this.getName() + " " + this.getSurname() + ", " + this.getAge()
+        return ("week1.university.Student name: " + this.getName() + " " + this.getSurname() + ", " + this.getAge()
                 + " years.");
     }
 

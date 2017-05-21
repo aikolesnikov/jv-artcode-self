@@ -1,4 +1,4 @@
-package doctors;
+package week1.doctors;
 
 import java.util.Scanner;
 
