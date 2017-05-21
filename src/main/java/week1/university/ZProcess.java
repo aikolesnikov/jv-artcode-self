@@ -29,8 +29,11 @@ public class ZProcess {
         }
 
 
-        Entity ent1 = new Entity("mmmm1");
-        System.out.println(ent1.getName());
+        NewUniver univ1 = new NewUniver("WWW");
+        System.out.println(univ1.getName());
+
+        NewUniver univ2 = new NewUniver(2);
+        System.out.println(univ2.getId());
 
         // Entity.out.println(gr1.getStQty());
 

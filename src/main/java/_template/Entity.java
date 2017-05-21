@@ -6,11 +6,18 @@ package _template;
 public class Entity{
 
     private int id;
+
     private String name;
     private int size;
     private Entity[] sub;
     private int qty;
 
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getName() {
         return this.name;
     }
@@ -18,5 +25,8 @@ public class Entity{
         this.name = name;
     }
 
-    public Entity(String name){this.setName(name);}
+    public Entity(){}
+    public Entity(String s){setName(s);}
+    public Entity (int i){setId(i);}
+
 }

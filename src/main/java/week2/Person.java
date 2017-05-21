@@ -1,7 +1,5 @@
 package week2;
 
-import javax.print.DocFlavor;
-
 /**
  *  Created by kaim on 5/20/17.
  */
