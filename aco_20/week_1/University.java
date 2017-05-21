@@ -26,7 +26,7 @@ class University {
     private int getUnSize() {
         return unSize;
     }
-    public void setUnSize(int unSize) {
+    private void setUnSize(int unSize) {
         this.unSize = unSize;
     }
     public Group[] getGroups() {
@@ -45,6 +45,7 @@ class University {
     University(int id, String name, int grSize){
         this.setId(id);
         this.setName(name);
+        this.setUnSize(grSize);
         this.setGroups(new Group[grSize]);
         this.setGrQty(0);
     }
