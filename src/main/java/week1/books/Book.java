@@ -24,8 +24,6 @@ abstract class Book {
 
     private String author;
 
-
-
     abstract boolean print();
 
     abstract int publish();

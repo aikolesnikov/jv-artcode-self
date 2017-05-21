@@ -11,6 +11,7 @@ public class Directory extends Book implements IEditable {
     public String getTheme() {
         return theme;
     }
+
     public void setTheme(String theme) {
         this.theme = theme;
     }
