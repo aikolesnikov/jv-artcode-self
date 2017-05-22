@@ -1,13 +1,15 @@
 package _template;
 
 /**
- * Created by kaim on 5/21/17.
+ * current process
  */
 public class Process {
     public static void main(String[] args) {
         Person p = new Person();
         p.setName("NNN");
+        System.out.println(p);
 
-        System.out.println(p.asString());
+        Entity e = new Entity("EEE");
+
     }
 }
