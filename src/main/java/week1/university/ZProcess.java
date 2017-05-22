@@ -1,6 +1,6 @@
 package week1.university;
 
-import _template.Entity;
+import _template.NewUniver;
 
 /**
  * main.
@@ -28,14 +28,6 @@ public class ZProcess {
             System.out.println(gr1.print());
         }
 
-
-        NewUniver univ1 = new NewUniver("WWW");
-        System.out.println(univ1.getName());
-
-        NewUniver univ2 = new NewUniver(2);
-        System.out.println(univ2.getId());
-
-        // Entity.out.println(gr1.getStQty());
 
         // univer1.init();
 

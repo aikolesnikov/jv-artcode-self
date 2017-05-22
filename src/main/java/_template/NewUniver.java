@@ -1,4 +1,4 @@
-package week1.university;
+package _template;
 
 
 import _template.Entity;
@@ -7,7 +7,7 @@ import _template.Entity;
  *  Created by kaim on 5/21/17.
  */
 public class NewUniver extends Entity {
-    String address;
+    private String address;
 
     public String getAddress() {
         return address;
@@ -16,7 +16,7 @@ public class NewUniver extends Entity {
         this.address = address;
     }
 
-    NewUniver(String s){this.setName(s);}
-    NewUniver(int i){this.setId(i);}
-
+    NewUniver(){}
+    NewUniver(String s){setName(s);}
+    NewUniver(long i){setId(i);}
 }
