@@ -12,7 +12,6 @@ public class TextUtils {
      * @return sorted by natural order array of unique words
      */
     public static String[] getUniqueSortedWords(String text) {
-//        TODO find mistake and correct it, so the method works correctly
         String[] words = getWords(text);
         String[] uniqueWords = getUniqueWords(words);
         return sortWords(uniqueWords);
@@ -27,7 +26,6 @@ public class TextUtils {
      */
     public static String[] getWords(String text) {
 
-//        TODO write your code here
         String str[] = new String[]{};
 
         if (text == null || text.length() == 0) return str;
@@ -40,8 +38,6 @@ public class TextUtils {
      * @return array with unique words
      */
     public static String[] getUniqueWords(String[] words) {
-
-//        TODO write your code here
 
         if (words.length <= 1) return words;
 
@@ -78,8 +74,6 @@ public class TextUtils {
      * @return sorted by natural order array of unique words
      */
     public static String[] sortWords(String[] uniqueWords) {
-
-//        TODO write your code here
 
         int arLenght = uniqueWords.length;
         String tmpStr;

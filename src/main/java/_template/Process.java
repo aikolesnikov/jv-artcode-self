@@ -1,13 +1,30 @@
 package _template;
 
 /**
- * Created by kaim on 5/21/17.
+ * current process
  */
 public class Process {
     public static void main(String[] args) {
+/*
         Person p = new Person();
         p.setName("NNN");
+        System.out.println(p);
+*/
 
-        System.out.println(p.asString());
+        NewUniver univ1 = new NewUniver("WWW");
+        System.out.println(univ1);
+
+        NewUniver univ2 = new NewUniver(2);
+        System.out.println(univ2.getId());
+
+        NewUniver univ3 = new NewUniver("XXX");
+        System.out.println(univ3);
+
+        Entity e = univ3;
+        System.out.println(e);
+
+        // Entity.out.println(gr1.getStQty());
+        // Entity e = new Entity("EEE");
+
     }
 }

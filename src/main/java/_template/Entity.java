@@ -1,38 +1,46 @@
 package _template;
 
 /**
- *  Created by kaim on 5/21/17.
+ *  abstract entity - parent of material objects
  */
 public class Entity{
-
-    private int id;
+    private long id;
     private String name;
-    private int size;
-    private Entity[] sub;
-    private int qty;
+    private long capacity;
+    private long size;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
-
-    protected void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
     public String getName() {
-        return this.name;
+        return name;
     }
-    protected void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
-    public int getQty() {
-        return qty;
+    public long getCapacity() {
+        return capacity;
     }
-    public void setQty(int qty) {
-        this.qty = qty;
+    public void setCapacity(long capacity) {
+        this.capacity = capacity;
+    }
+    public long getSize() {
+        return size;
+    }
+    public void setSize(long size) {
+        this.size = size;
     }
 
-    protected Entity(){}
-    public Entity(String s){setName(s);}
-    public Entity (int i){setId(i);}
 
+    public Entity(){}
+    public Entity(long id){this.setId(id);}
+    public Entity(String name){this.setName(name);}
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
