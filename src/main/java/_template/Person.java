@@ -42,7 +42,7 @@ class Person {
     }
 
     String asString(){
-        return this.name;
+        return this.name + " " + this.surname;
     }
 }
 

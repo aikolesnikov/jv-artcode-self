@@ -3,7 +3,7 @@ package _template;
 /**
  *  abstract entity - parent of material objects
  */
-abstract public class Entity{
+public class Entity{
     private long id;
     private String name;
     private long capacity;
@@ -37,6 +37,7 @@ abstract public class Entity{
 
     public Entity(){}
     public Entity(long id){this.setId(id);}
+    public Entity(String name){this.setName(name);}
 
     @Override
     public String toString() {

@@ -17,6 +17,12 @@ public class Process {
         NewUniver univ2 = new NewUniver(2);
         System.out.println(univ2.getId());
 
+        NewUniver univ3 = new NewUniver("XXX");
+        System.out.println(univ3);
+
+        Entity e = univ3;
+        System.out.println(e);
+
         // Entity.out.println(gr1.getStQty());
         // Entity e = new Entity("EEE");
 
