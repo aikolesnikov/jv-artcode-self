@@ -28,25 +28,25 @@ abstract class s001System {
     /**
      * organic
      */
-    static class s101MaterialOrganic {
+    abstract static class s101MaterialOrganic {
     }
 
     /**
      * nonorganic
      */
-    static class s102MaterialNonOrganic {
+    abstract static class s102MaterialNonOrganic {
     }
 
     /**
      * Created by artyom.kolesnikov on 5/22/2017.
      */
-    static class s1001OrganicFauna extends s101MaterialOrganic {
+    abstract static class s1001OrganicFauna extends s101MaterialOrganic {
     }
 
     /**
      * Created by artyom.kolesnikov on 5/22/2017.
      */
-    static class s1002OrganicFlora extends s101MaterialOrganic {
+    abstract static class s1002OrganicFlora extends s101MaterialOrganic {
     }
 }
 
