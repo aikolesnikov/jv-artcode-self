@@ -71,7 +71,7 @@ public class Entity {
 
     @Override
     public String toString() {
-        l.info(this.getClass().getName());
+        l.info("Object print request");
         return name;
     }
 }

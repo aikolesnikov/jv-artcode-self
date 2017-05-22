@@ -6,7 +6,7 @@ package _template;
 public class Process {
     public static void main(String[] args) {
         // NewUniver univ1 = new NewUniver(1, "WWW");
-        NewUniver univ2 = new NewUniver();
+        NewUniver univ2 = new NewUniver(1,"QQQ");
         System.out.println(univ2);
 
         // Entity e = new Entity(1,"");
