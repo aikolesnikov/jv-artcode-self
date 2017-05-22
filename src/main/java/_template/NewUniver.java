@@ -17,6 +17,5 @@ public class NewUniver extends Entity {
     }
 
     NewUniver(){}
-    NewUniver(String s){setName(s);}
-    NewUniver(long i){setId(i);}
+    NewUniver(long i, String s){setId(i); setName(s);}
 }
