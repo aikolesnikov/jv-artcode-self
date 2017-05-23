@@ -9,6 +9,8 @@ public class Process {
         NewUniver univ2 = new NewUniver(1,"QQQ");
         System.out.println(univ2);
 
+        System.out.println(univ2.getSubEntities());
+
         // Entity e = new Entity(1,"");
         // System.out.println(e.getName());
     }

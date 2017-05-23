@@ -13,20 +13,20 @@ public class Entity {
     private Entity[] subEntities;
     private long size;
 
-    public Entity[] getSubEntities() {
-        return subEntities;
-    }
-
-    public void setSubEntities(Entity[] subEntities) {
-        this.subEntities = subEntities;
-    }
-
     long getId() {
         return id;
     }
 
     void setId(long id) {
         this.id = id;
+    }
+
+    public Entity[] getSubEntities() {
+        return subEntities;
+    }
+
+    public void setSubEntities(Entity[] subEntities) {
+        this.subEntities = subEntities;
     }
 
     public String getName() {
@@ -71,7 +71,7 @@ public class Entity {
 
     @Override
     public String toString() {
-        l.info("Object print request");
+        // l.info("Object print request");
         return name;
     }
 }
