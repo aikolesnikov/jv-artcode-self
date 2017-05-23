@@ -21,7 +21,7 @@ public class Entity {
         this.id = id;
     }
 
-    public Entity[] getSubEntities() {
+    Entity[] getSubEntities() {
         return subEntities;
     }
 
@@ -33,7 +33,7 @@ public class Entity {
         return name;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
