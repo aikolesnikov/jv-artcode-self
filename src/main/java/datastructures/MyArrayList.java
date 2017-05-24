@@ -1,7 +1,7 @@
 package datastructures;
 
 /**
- * Created by kaim on 5/21/17.
+ * MyArrayLisr Class
  */
 public class MyArrayList implements MyList {
 
@@ -11,10 +11,32 @@ public class MyArrayList implements MyList {
     ArrayList(int initialCapacity);             // Constructs an empty list with the specified initial capacity.
 */
 
+    private static final int initSize = 10;
+
+    private int size;
+    private Object[] ar;
+
+    public int getSize() {return size;}
+    public void setSize(int size) {this.size = size;}
+    public Object[] getAr() {return ar;}
+    public void setAr(Object[] ar) {this.ar = ar;}
+
+
+    private MyArrayList(){
+        this.setSize(initSize);
+        this.setAr(new Object[initSize]);
+    }
+
     @Override
     public boolean add(Object o) {
-        return false;
+
+        return true;
     }
 
 
+    public static void main(String[] args) {
+        MyArrayList a = new MyArrayList();
+        System.out.println(a.size);
+        System.out.println(a.ar[3]);
+    }
 }

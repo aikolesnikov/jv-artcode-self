@@ -5,14 +5,14 @@ package datastructures;
  */
 interface MyCollection{
 
-    boolean	add(Object oAdd);               // Ensures that this collection contains the specified element (optional operation).
-    void	clear();                        // Removes all of the elements from this collection (optional operation).
-    boolean	contains(Object oContains);     // Returns true if this collection contains the specified element.
-    // boolean	equals(Object oEquals);     // Compares the specified object with this collection for equality.
-    boolean	remove(Object oRemove);         // Removes a single instance of the specified element from this collection, if it is present (optional operation).
-    boolean	isEmpty();                      // Returns true if this collection contains no elements.
-    int	size();                             // Returns the number of elements in this collection.
-    Object[] toArray();                     // Returns an array containing all of the elements in this collection.
+    boolean	add(Object o);               // Ensures that this collection contains the specified element (optional operation).
+    //void	clear();                        // Removes all of the elements from this collection (optional operation).
+    //boolean	contains(Object o);     // Returns true if this collection contains the specified element.
+    //// boolean	equals(Object o);     // Compares the specified object with this collection for equality.
+    //boolean	remove(Object o);         // Removes a single instance of the specified element from this collection, if it is present (optional operation).
+    //boolean	isEmpty();                      // Returns true if this collection contains no elements.
+    //int	size();                             // Returns the number of elements in this collection.
+    //Object[] toArray();                     // Returns an array containing all of the elements in this collection.
 
 /*
     boolean	containsAll(Collection<?> c);       Returns true if this collection contains all of the elements in the specified collection.
