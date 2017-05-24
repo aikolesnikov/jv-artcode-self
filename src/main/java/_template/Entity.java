@@ -1,6 +1,5 @@
 package _template;
 
-
 import java.util.logging.Logger;
 
 /**
@@ -55,7 +54,7 @@ public class Entity {
 
     private Logger l = Logger.getLogger(this.getClass().getName());
 
-    Entity() {
+    public Entity() {
     }
 
     Entity(long id, String name) {
