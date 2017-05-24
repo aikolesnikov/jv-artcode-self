@@ -57,7 +57,7 @@ public class Entity {
     public Entity() {
     }
 
-    Entity(long id, String name) {
+    public Entity(long id, String name) {
         this.setId(id);
         if ((name == null) || (name.equals(""))) {
             l.warning("Entity (" + id + ") as been created with default name.");
