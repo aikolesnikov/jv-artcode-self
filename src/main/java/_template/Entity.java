@@ -52,18 +52,22 @@ public class Entity {
         this.size = size;
     }
 
-    private Logger l = Logger.getLogger(this.getClass().getName());
 
     public Entity() {
     }
 
     public Entity(long id, String name) {
+        // Logger l = Logger.getLogger(this.getClass().getName());
+
         this.setId(id);
+
         if ((name == null) || (name.equals(""))) {
-            l.warning("Entity (" + id + ") as been created with default name.");
+           // l.warning("Entity (" + id + ") has been created with default name.");
+            System.out.println("Entity (" + id +
+                    ") has been created with default name.");
         } else {
             this.setName(name);
-            l.info("Entity (" + id + ", " + name + ") has been created.");
+            //l.info("Entity (" + id + ", " + name + ") has been created.");
         }
     }
 
