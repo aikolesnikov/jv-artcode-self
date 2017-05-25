@@ -16,27 +16,21 @@ public class Entity {
     void setId(long id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     void setName(String name) {
         this.name = name;
     }
-
     public long getCapacity() {
         return capacity;
     }
-
     public void setCapacity(long capacity) {
         this.capacity = capacity;
     }
-
     public long getSize() {
         return size;
     }
-
     public void setSize(long size) {
         this.size = size;
     }
