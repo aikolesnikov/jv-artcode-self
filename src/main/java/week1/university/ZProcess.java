@@ -1,7 +1,5 @@
 package week1.university;
 
-import _template.NewUniver;
-
 /**
  * main.
  */

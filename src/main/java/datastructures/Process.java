@@ -10,14 +10,14 @@ public class Process {
         MyArrayList a = new MyArrayList();
         MyArrayList b = new MyArrayList();
 
-        a.setSize(10);
-        a.print();
+        System.out.println(a.getAr().length);
+
         System.out.println(a.size());
+        System.out.println(a.print());
 
         a.add(new Entity(1, "AFG"));
-        a.print();
         System.out.println(a.size());
-
+        System.out.println(a.print());
 
     }
 }

@@ -7,25 +7,29 @@ import java.util.logging.Logger;
  */
 public class MyArrayList implements MyList {
 
-    private static final int initSize = 10;
+    private static final int initSize = 0;  // it was 10
 
     private int size;
     private Object[] ar;
 
     public int getSize() {return size;}
     public void setSize(int size) {this.size = size;}
-    private Object[] getAr() {return ar;}
+    public Object[] getAr() {return ar;}
     public void setAr(Object[] ar) {this.ar = ar;}
 
-    MyArrayList() {
+    public MyArrayList() {
         this.setSize(initSize);
         this.setAr(new Object[initSize]);
     }
-    MyArrayList(MyArrayList o) {
+    public MyArrayList(MyArrayList o) {
         this.setSize(o.getSize());
         this.setAr(o.getAr());
     }
-    MyArrayList(int initialCapacity) {
+    public MyArrayList(Object[] ar) {
+        this.setSize(ar.length);
+        this.setAr(ar);
+    }
+    public MyArrayList(int initialCapacity) {
         this.setSize(initialCapacity);
         this.setAr(new Object[initialCapacity]);
     }
@@ -172,13 +176,16 @@ public class MyArrayList implements MyList {
     }
 
 
+    public String print(){
 
-    public void print(){
-        System.out.println("MyArrayList:");
+        String str = "";
         for (int i=0; i<this.getSize(); i++){
-            System.out.println(this.getAr()[i]);
+            str = str + this.getAr()[i] + ", ";
         }
+
+        return str;
     }
+
 
 }
 

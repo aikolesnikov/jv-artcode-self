@@ -1,45 +1,46 @@
 package _template;
 
+import javax.swing.plaf.PanelUI;
+
 /**
  *  Created by kaim on 5/21/17.
  */
-class Person {
+public class Person {
     private String name;
     private String surname;
-    private String middlename;
     private int age;
     private char sex; // change to enum
 
-    String getName() {
+    public String getName() {
         return name;
     }
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
-    String getSurname() {
+    public String getSurname() {
         return surname;
     }
-    void setSurname(String surname) {
+    public void setSurname(String surname) {
         this.surname = surname;
     }
-    String getMiddlename() {
-        return middlename;
-    }
-    void setMiddlename(String middlename) {
-        this.middlename = middlename;
-    }
-    int getAge() {
+    public int getAge() {
         return age;
     }
-    void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
-    char getSex() {
+    public char getSex() {
         return sex;
     }
-    void setSex(char sex) {
+    public void setSex(char sex) {
         this.sex = sex;
     }
+
+    public Person(){
+        this.setName("");
+        this.setSurname("");
+    }
+    public Person(String name){this.setName(name);}
 
     String asString(){
         return this.name + " " + this.surname;

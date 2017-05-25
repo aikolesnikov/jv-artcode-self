@@ -1,13 +1,15 @@
 package _template;
 
+import university.Univer;
+
 /**
  * current process
  */
 public class Process {
     public static void main(String[] args) {
-        // NewUniver univ1 = new NewUniver(1, "WWW");
-        NewUniver univ2 = new NewUniver(1,"QQQ");
-        System.out.println(univ2);
+        // Univer univ1 = new Univer(1, "WWW");
+        // Univer univ2 = new Univer(1,"QQQ");
+        System.out.println("test");
 
         // Entity e = new Entity(1,"");
         // System.out.println(e.getName());
@@ -19,13 +21,13 @@ public class Process {
         p.setName("NNN");
         System.out.println(p);
 
-        NewUniver univ1 = new NewUniver("WWW");
+        Univer univ1 = new Univer("WWW");
         System.out.println(univ1);
 
-        NewUniver univ2 = new NewUniver(2);
+        Univer univ2 = new Univer(2);
         System.out.println(univ2.getId());
 
-        NewUniver univ3 = new NewUniver("XXX");
+        Univer univ3 = new Univer("XXX");
         System.out.println(univ3);
 
         Entity e = univ3;
