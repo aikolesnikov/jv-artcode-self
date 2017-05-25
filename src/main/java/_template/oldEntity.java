@@ -3,10 +3,11 @@ package _template;
 /**
  * abstract entity - parent of material objects
  */
-public class Entity {
+public class oldEntity {
     private long id;
     private String name = "default";
     private long capacity;
+    private oldEntity[] subEntities;
     private long size;
 
     long getId() {
@@ -15,6 +16,14 @@ public class Entity {
 
     void setId(long id) {
         this.id = id;
+    }
+
+    oldEntity[] getSubEntities() {
+        return subEntities;
+    }
+
+    public void setSubEntities(oldEntity[] subEntities) {
+        this.subEntities = subEntities;
     }
 
     public String getName() {
@@ -42,10 +51,10 @@ public class Entity {
     }
 
 
-    public Entity() {
+    public oldEntity() {
     }
 
-    public Entity(long id, String name) {
+    public oldEntity(long id, String name) {
         // Logger l = Logger.getLogger(this.getClass().getName());
 
         this.setId(id);
@@ -59,6 +68,7 @@ public class Entity {
             //l.info("Entity (" + id + ", " + name + ") has been created.");
         }
     }
+
 
     @Override
     public String toString() {
