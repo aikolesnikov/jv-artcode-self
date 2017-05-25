@@ -30,7 +30,6 @@ public class MyArrayList implements MyList {
         this.setAr(new Object[initialCapacity]);
     }
 
-
     public Object get(int index) {
         Logger l = Logger.getLogger(this.getClass().getName());
 
@@ -157,7 +156,8 @@ public class MyArrayList implements MyList {
 
         return ind;
     }
-    // int lastIndexOf(Object o)
+
+
 
     public void print(){
         System.out.println("MyArrayList:");
@@ -166,5 +166,21 @@ public class MyArrayList implements MyList {
         }
     }
 
-
 }
+
+
+    /*
+    int lastIndexOf(Object o){
+        int ind = -1;
+
+        int actualSize = this.getSize();
+        for (int i=actualSize-1; i>=0 ; i--){
+            if (this.equals(o, i)){
+                ind = i;
+                return ind;
+            }
+        }
+
+        return ind;
+    }
+*/
