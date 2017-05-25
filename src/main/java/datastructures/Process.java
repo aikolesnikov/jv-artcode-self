@@ -10,6 +10,20 @@ public class Process {
         MyArrayList a = new MyArrayList();
         MyArrayList b = new MyArrayList();
 
+        a.setSize(10);
+        a.print();
+        System.out.println(a.size());
+
+        a.add(new Entity(1, "AFG"));
+        a.print();
+        System.out.println(a.size());
+
+
+    }
+}
+
+
+        /*
         System.out.println(a.equals(b));
 
         System.out.println(a.getSize());
@@ -28,8 +42,10 @@ public class Process {
         a.print();
         System.out.println(a.equals(b));
 
-        System.out.println(a.indexOf(a.get(12)));
+        // System.out.println(a.indexOf(a.get(12)));
         System.out.println(a.indexOf(a.get(2)));
 
-    }
-}
+        a.set(4, "qwe");
+        a.print();
+
+*/

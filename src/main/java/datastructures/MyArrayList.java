@@ -69,7 +69,11 @@ public class MyArrayList implements MyList {
         }
 
         try {
-            this.resize(this.getSize() * 3 / 2);
+            int actualSize = this.getSize();
+
+            if (actualSize<=1) this.resize(actualSize+1);
+            else this.resize(actualSize * 3 / 2);
+            this.getAr()[actualSize]=o;
         }
         catch (Exception e){
             System.out.println("Can not resize.");
@@ -155,6 +159,16 @@ public class MyArrayList implements MyList {
         }
 
         return ind;
+    }
+    public boolean set(int index, Object o){
+        if ((index < 0) || (index > this.getSize())) {
+            System.out.println("Index is out of range.");
+            return false;
+        }
+
+        this.getAr()[index]=o;
+
+        return true;
     }
 
 

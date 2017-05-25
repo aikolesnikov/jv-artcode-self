@@ -1,7 +1,5 @@
 package _template;
 
-import java.util.logging.Logger;
-
 /**
  * abstract entity - parent of material objects
  */
