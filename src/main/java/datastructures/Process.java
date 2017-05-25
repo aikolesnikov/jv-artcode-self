@@ -28,5 +28,6 @@ public class Process {
         a.print();
         System.out.println(a.equals(b));
 
+        System.out.println(a.indexOf(a.get(3)));
     }
 }
