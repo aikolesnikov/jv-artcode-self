@@ -25,8 +25,8 @@ public class StudentTests {
 
         MyArrayList students = new MyArrayList();
 
-        System.out.println(students.add(student1));
-        // Assert.assertTrue(students.add(student1));
+        // System.out.println(students.add(student1));
+        Assert.assertTrue(students.add(student1));
         students.add(student2);
         students.add(student3);
         students.add(student4);
