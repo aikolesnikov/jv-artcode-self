@@ -1,7 +1,5 @@
 package university;
 
-import _template.Entity;
-
 /**
  * general class for subjects
  */

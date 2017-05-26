@@ -7,7 +7,7 @@ import java.util.logging.Logger;
  */
 public class MyArrayList implements MyList {
 
-    private static final int initSize = 0;  // it was 10
+    private static final int initSize = 1;  // it was 10
 
     private int size;
     private Object[] ar;

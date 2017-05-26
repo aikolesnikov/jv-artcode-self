@@ -1,21 +1,19 @@
 package university;
 
+
 import datastructures.MyArrayList;
+import org.junit.Assert;
+import org.junit.Test;
 
 import static university.Subject.*;
 
 /**
- * classes using testing
+ * Student class tests
  */
-public class zProcess {
+public class StudentTests {
 
-    public static void main(String[] args) {
-
-        Univer univ1 = new Univer();
-        univ1.setName("KPI");
-        univ1.setId(1);
-        Univer univ2 = new Univer(2, "KNU");
-
+    @Test
+    public void checkStudents(){
         Student student1 = new Student(1, "Student1",
                 (new Subject[]{Mathematics}));
         Student student2 = new Student(2, "Student2",
@@ -25,19 +23,15 @@ public class zProcess {
         Student student4 = new Student(4, "Student4",
                 (new Subject[]{Chemistry, Biology}));
 
-
-        MyArrayList universities = new MyArrayList();
         MyArrayList students = new MyArrayList();
 
-        universities.add(univ1);
-        universities.add(univ2);
-        students.add(student1);
+        System.out.println(students.add(student1));
+        // Assert.assertTrue(students.add(student1));
         students.add(student2);
         students.add(student3);
         students.add(student4);
 
-        System.out.println(universities.print());
         System.out.println(students.print());
-
     }
+
 }

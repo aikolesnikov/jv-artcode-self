@@ -10,7 +10,7 @@ import java.util.logging.Logger;
  * first test with JUnit
  */
 
-public class UniverTest{
+public class UniverTests {
 // @Before
 // public void BeforeUniver(){}
 
