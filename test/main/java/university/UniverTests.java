@@ -40,6 +40,7 @@ public void UniverTestCteation(){
     Assert.assertEquals(universities.size(),2);
 
     l.info(universities.print());
+
 }
 
     /*    @After

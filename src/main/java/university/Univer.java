@@ -10,6 +10,7 @@ import datastructures.MyArrayList;
 public class Univer extends Entity {
     private String address;
     MyArrayList providesSubjects;
+    MyArrayList groups;
 
     public String getAddress() {
         return address;

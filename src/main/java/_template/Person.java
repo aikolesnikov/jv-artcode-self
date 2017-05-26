@@ -1,7 +1,5 @@
 package _template;
 
-import javax.swing.plaf.PanelUI;
-
 /**
  *  Created by kaim on 5/21/17.
  */
