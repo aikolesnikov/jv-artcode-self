@@ -38,6 +38,8 @@ public void UniverTestCteation(){
     Assert.assertNotNull(universities.get(0));
     Assert.assertFalse(universities.get(0).equals(universities.get(1)));
     Assert.assertEquals(universities.size(),2);
+
+    l.info(universities.print());
 }
 
     /*    @After
