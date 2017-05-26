@@ -38,5 +38,6 @@ public class zProcess {
 
         System.out.println(universities.print());
         System.out.println(students.print());
+
     }
 }
