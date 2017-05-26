@@ -8,5 +8,8 @@ import _template.Entity;
 public enum Subject{
     Mathematics,
     Literature,
-    Business
+    Business,
+    Chemistry,
+    ComputerScience,
+    Biology
 }
