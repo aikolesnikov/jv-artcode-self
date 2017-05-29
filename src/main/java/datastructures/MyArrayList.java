@@ -179,8 +179,8 @@ public class MyArrayList implements MyList {
     public String print(){
 
         String str = "";
-        for (int i=0; i<this.getSize(); i++){
-            str = (i<getSize()-1)?(str + this.getAr()[i] + ", "):(str + this.getAr()[i]);
+        for (int i=0; i<this.size; i++){
+            str = (i<size-1)?(str + this.getAr()[i] + ", "):(str + this.getAr()[i]);
         }
 
         return str;
