@@ -114,7 +114,7 @@ public class MyArrayList implements MyList {
         }
     }
     public boolean	contains(Object o){
-        for (int i=0; i<this.getSize(); i++){
+        for (int i=0; i<this.size; i++){
             if (this.equals(o, i)){
                 return true;
             }
@@ -123,12 +123,12 @@ public class MyArrayList implements MyList {
     }
     public boolean	remove(Object o){
 
-        int actualSize = this.getSize();
+        int actualSize = this.size;
 
         for (int i=0; i<actualSize; i++){
             if (this.equals(o, i)){
-                for (int j=i; j<this.getSize()-1;j++){
-                    this.getAr()[j]=this.getAr()[j+1];
+                for (int j=i; j<this.size-1;j++){
+                    this.ar[j]=this.ar[j+1];
                 }
                 this.setSize(actualSize-1);
                 return true;
@@ -146,7 +146,7 @@ public class MyArrayList implements MyList {
         }
 
         for (int j=ind; j<actualSize-1;j++){
-            this.getAr()[j]=this.getAr()[j+1];
+            this.getAr()[j]=this.ar[j+1];
         }
         this.setSize(actualSize-1);
 
@@ -166,12 +166,12 @@ public class MyArrayList implements MyList {
         return ind;
     }
     public boolean set(int index, Object o){
-        if ((index < 0) || (index > this.getSize())) {
+        if ((index < 0) || (index > this.size)) {
             System.out.println("Index is out of range.");
             return false;
         }
 
-        this.getAr()[index]=o;
+        this.ar[index]=o;
 
         return true;
     }
