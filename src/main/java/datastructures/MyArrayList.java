@@ -180,7 +180,7 @@ public class MyArrayList implements MyList {
 
         String str = "";
         for (int i=0; i<this.size; i++){
-            str = (i<size-1)?(str + this.getAr()[i] + ", "):(str + this.getAr()[i]);
+            str = (i<size-1)?(str + this.ar[i] + ", "):(str + this.ar[i]);
         }
 
         return str;
