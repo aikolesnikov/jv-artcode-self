@@ -12,27 +12,28 @@ public class MyArrayList implements MyList {
     private int size;
     private Object[] ar;
 
+    public MyArrayList() {
+        this.size = initSize;
+        this.ar = new Object[initSize];
+    }
+    public MyArrayList(MyArrayList o) {
+        this.size = o.size;
+        this.ar = o.ar;
+    }
+    public MyArrayList(Object[] ar) {
+        this.size = ar.length;
+        this.ar = ar;
+    }
+    public MyArrayList(int initialCapacity) {
+        this.size = initialCapacity;
+        this.ar = new Object[initialCapacity];
+    }
+
     public int getSize() {return size;}
     public void setSize(int size) {this.size = size;}
     public Object[] getAr() {return ar;}
-    public void setAr(Object[] ar) {this.ar = ar;}
 
-    public MyArrayList() {
-        this.setSize(initSize);
-        this.setAr(new Object[initSize]);
-    }
-    public MyArrayList(MyArrayList o) {
-        this.setSize(o.getSize());
-        this.setAr(o.getAr());
-    }
-    public MyArrayList(Object[] ar) {
-        this.setSize(ar.length);
-        this.setAr(ar);
-    }
-    public MyArrayList(int initialCapacity) {
-        this.setSize(initialCapacity);
-        this.setAr(new Object[initialCapacity]);
-    }
+    public void setAr(Object[] ar) {this.ar = ar;}
 
     public Object get(int index) {
         Logger l = Logger.getLogger(this.getClass().getName());
@@ -42,9 +43,9 @@ public class MyArrayList implements MyList {
             return null;
         }
 
-        return this.getAr()[index];
+        return this.ar[index];
     }
-    public int size() {return this.getSize();}
+    public int size() {return this.size;}
     public void resize(int newSize){
 
         int actualSize = this.getSize();
@@ -65,19 +66,19 @@ public class MyArrayList implements MyList {
     }
     public boolean	isEmpty(){return size == 0;}
     public boolean add(Object o) {
-        for (int i=0; i<this.getSize(); i++){
-            if (this.getAr()[i] == null){
-                this.getAr()[i] = o;
+        for (int i=0; i<this.size; i++){
+            if (this.ar[i] == null){
+                this.ar[i] = o;
                 return true;
             }
         }
 
         try {
-            int actualSize = this.getSize();
+            int actualSize = this.size;
 
             if (actualSize<=1) this.resize(actualSize+1);
             else this.resize(actualSize * 3 / 2);
-            this.getAr()[actualSize]=o;
+            this.ar[actualSize]=o;
         }
         catch (Exception e){
             System.out.println("Can not resize.");
@@ -87,7 +88,7 @@ public class MyArrayList implements MyList {
     }
     public boolean equals(MyArrayList o){
 
-        if ((this.getAr()==null) && (o == null)) return true;
+        if ((this.ar==null) && (o == null)) return true;
 
         int actualSize = this.size;
         if (!(actualSize==o.size)) return false;
@@ -175,7 +176,6 @@ public class MyArrayList implements MyList {
         return true;
     }
 
-
     public String print(){
 
         String str = "";
@@ -185,7 +185,6 @@ public class MyArrayList implements MyList {
 
         return str;
     }
-
 
 }
 
