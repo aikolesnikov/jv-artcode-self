@@ -20,5 +20,6 @@ public class StudentTests {
         Assert.assertTrue(st4.getSurname().equals("st4_surname"));
         Assert.assertTrue(st4.getAge()==17);
 
+        System.out.println(st4.toString().equals("Student: {st4_name st4_surname}"));
     }
 }
