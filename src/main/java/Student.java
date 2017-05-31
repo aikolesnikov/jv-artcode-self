@@ -3,9 +3,7 @@
  */
 class Student {
     private String name;
-
     private String surname;
-
     private int age;
 
     String getName() {
@@ -55,4 +53,3 @@ class Student {
         return "Student: {" + name + " " + surname + '}';
     }
 }
-
