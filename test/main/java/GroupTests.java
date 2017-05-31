@@ -19,21 +19,38 @@ public class GroupTests {
         Group gr3 = new Group(3, arSt);
         Group gr4 = new Group(4, null);
 
+        Student[] arSt2 = new Student[]{
+                new Student("st_name1"),
+                null,
+                new Student("st_name3"),
+        };
+
+        Group gr5 = new Group(5, arSt2);
+
         Assert.assertTrue(gr1.getId() == 0);
         Assert.assertTrue(gr1.getStudents().length == Group.getInitGrSize());
-        Assert.assertTrue(gr1.getSize() == 0);
+        Assert.assertTrue(gr1.getActualSize() == 0);
+        Assert.assertTrue(gr1.getCapacity() == Group.getInitGrSize());
 
         Assert.assertTrue(gr2.getId() == 2);
         Assert.assertTrue(gr2.getStudents().length == Group.getInitGrSize());
-        Assert.assertTrue(gr2.getSize() == 0);
+        Assert.assertTrue(gr2.getActualSize() == 0);
+        Assert.assertTrue(gr1.getCapacity() == Group.getInitGrSize());
 
         Assert.assertTrue(gr3.getId() == 3);
         Assert.assertTrue(gr3.getStudents().length == 3);
-        Assert.assertTrue(gr3.getSize() == 3);
+        Assert.assertTrue(gr3.getActualSize() == 3);
+        Assert.assertTrue(gr3.getCapacity() == 3);
         Assert.assertTrue(gr3.getStudents()[2].getName().equals("st_name3"));
 
-        Assert.assertTrue(gr4.getSize() == 0);
         Assert.assertTrue(gr4.getStudents().length == Group.getInitGrSize());
+        Assert.assertTrue(gr4.getActualSize()==0);
+        Assert.assertTrue(gr4.getCapacity()==Group.getInitGrSize());
+
+        Assert.assertTrue(gr5.getStudents().length == 3);
+        Assert.assertTrue(gr5.getActualSize()==2);
+        Assert.assertTrue(gr5.getCapacity()==3);
+
     }
 
     @Test
