@@ -44,7 +44,7 @@ class Student {
     }
 
     String print() {
-        return ("week1.university.Student name: " + this.getName() + " " + this.getSurname() + ", " + this.getAge()
+        return ("week1.Student name: " + this.getName() + " " + this.getSurname() + ", " + this.getAge()
                 + " years.");
     }
 

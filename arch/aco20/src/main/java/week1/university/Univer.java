@@ -58,21 +58,21 @@ class Univer {
 
         if (group == null) return false;
         if (grQty==this.getUnSize()) {
-            System.out.println("Groups' limit is exceeded. week1.university.Group " + group.getGroupId() +
+            System.out.println("Groups' limit is exceeded. week1.Group " + group.getGroupId() +
                     " has not been added.\n");
             return false;
         }
 
         this.groups[grQty++] = group;
         this.setGrQty(grQty);
-        System.out.println("week1.university.Group " + group.getGroupId() +
+        System.out.println("week1.Group " + group.getGroupId() +
                 " has been added into university " + this.getName() + "\n");
 
         return true;
     }
 
     boolean init (){
-        Logger l = Logger.getLogger("week1.university.Univer");
+        Logger l = Logger.getLogger("week1.Univer");
 
         Group gr1 = new Group(1, 10);
         Group gr2 = new Group(2, 5);
@@ -95,6 +95,6 @@ class Univer {
 
 
 
-// week1.university.Student s1 = new week1.university.Student();
+// week1.Student s1 = new week1.Student();
 // s1.setName("Yaaa");
-// week1.university.Student s2 = new week1.university.Student("BB", "Bbbbb", 23);
+// week1.Student s2 = new week1.Student("BB", "Bbbbb", 23);

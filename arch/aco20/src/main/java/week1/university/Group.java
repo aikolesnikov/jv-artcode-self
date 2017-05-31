@@ -55,14 +55,14 @@ class Group {
 
         if (student == null) return false;
         if (stQ == this.getGroupSize()) {
-            System.out.println("week1.university.Group limit is exceeded. week1.university.Student " + student.getName() +
+            System.out.println("week1.Group limit is exceeded. week1.Student " + student.getName() +
                     " has not been added.\n");
             return false;
         }
 
         this.students[stQty++] = student;
         System.out.println(this.getStQty());
-        System.out.println("week1.university.Student " + student.getName() +
+        System.out.println("week1.Student " + student.getName() +
                 " has been added into group " + this.getGroupId() + "\n");
         return true;
     }
@@ -79,7 +79,7 @@ class Group {
 
     String print() {
 
-        String info = "week1.university.Group " + this.getGroupId() + ":\n";
+        String info = "week1.Group " + this.getGroupId() + ":\n";
 
         for (int i = 0; i < this.groupSize; i++) {
             if (!(students[i] == null)) {
@@ -99,7 +99,7 @@ class Group {
 
 // old second constructor
 /*
-    week1.university.Group(int num, week1.university.Student[] students) {
+    week1.Group(int num, week1.Student[] students) {
         this.setGroupId(num);
         this.setGroupSize(students.length);
         this.students = students;

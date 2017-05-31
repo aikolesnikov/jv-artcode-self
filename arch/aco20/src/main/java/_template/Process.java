@@ -1,7 +1,5 @@
 package _template;
 
-import university.Univer;
-
 /**
  * current process
  */
