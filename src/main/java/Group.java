@@ -82,10 +82,10 @@ class Group {
             }
             return -1;
         }
-            for (int i = 0; i < students.length; i++) {
-                if (null == students[i]) return i;
-            }
-            return -1;
+        for (int i = 0; i < students.length; i++) {
+            if (null == students[i]) return i;
+        }
+        return -1;
 
     }
 
@@ -121,10 +121,26 @@ class Group {
 
     boolean replaceStudent(int index, Student student) {
         if (index < 0 || index > this.students.length - 1) return false;
-        this.students[index]=student;
+        this.students[index] = student;
 
         return true;
     }
+
+    void sortStudents() {
+        int bound = students.length;
+        Student tmpSt;
+
+        for (int i = 0; i < bound; i++) {
+            for (int j = bound-1; j > i; j--) {
+                if (students[j].toString().compareToIgnoreCase(students[j-1].toString())>0){
+                    tmpSt = students[j];
+                    students[j] = students[j-1];
+                    students[j-1] = tmpSt;
+                }
+            }
+        }
+    }
+
 
     @Override
     public String toString() {

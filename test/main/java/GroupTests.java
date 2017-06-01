@@ -125,5 +125,24 @@ public class GroupTests {
 
     }
 
+    @Test
+    public void checkSortStudentsOperations(){
+
+        Group gr = new Group (1, new Student[]{
+                new Student("student4"),
+                new Student("student2"),
+                new Student("student3"),
+                new Student("student_aaa"),
+                new Student("student0")
+        });
+
+        System.out.println(gr.toString());
+        gr.sortStudents();
+        System.out.println(gr.toString());
+        //Assert.assertTrue(gr.getStudents()[1].getName().equals("aaa_name"));
+
+    }
+
+
 }
 
