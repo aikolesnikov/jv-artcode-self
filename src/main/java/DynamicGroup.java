@@ -1,7 +1,7 @@
 /**
  * dynamic array
  */
-public class DynamicGroup extends Group {
+class DynamicGroup extends Group {
 
     DynamicGroup(int id, Student[] students) {
         this.id = id;
@@ -26,14 +26,14 @@ public class DynamicGroup extends Group {
             System.arraycopy(students, 0, newAr, 0, students.length - 1);
             students = newAr;
         }
-            for (int i = 0; i < students.length - 1; i++) {
-                if (students[i] == null) {
-                    students[i] = student;
-                    size++;
-                    return true;
-                }
+        for (int i = 0; i < students.length - 1; i++) {
+            if (students[i] == null) {
+                students[i] = student;
+                size++;
+                return true;
             }
-            students[size] = student;
+        }
+        students[size] = student;
 
         return true;
     }
