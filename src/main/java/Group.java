@@ -2,10 +2,10 @@
  * group of students class
  */
 class Group {
-    private static final int INIT_GR_SIZE = 5;
-    private int id;
-    private int size;
-    private Student[] students;
+    protected static final int INIT_GR_SIZE = 5;
+    protected int id;
+    protected int size;
+    protected Student[] students;
 
     int getId() {
         return id;
