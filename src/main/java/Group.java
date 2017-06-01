@@ -36,7 +36,7 @@ class Group {
     }
 
     Group() {
-        this.students = new Student[INIT_GR_SIZE];
+        students = new Student[INIT_GR_SIZE];
         size = 0;
     }
 
