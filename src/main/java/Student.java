@@ -50,6 +50,6 @@ class Student {
 
     @Override
     public String toString() {
-        return "Student: {" + name + " " + surname + '}';
+        return "Student: {" + ((this.name == null) ? "" : name) + ((this.surname == null) ? "" : (" " + surname)) + '}';
     }
 }
