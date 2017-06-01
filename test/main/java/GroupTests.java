@@ -26,6 +26,7 @@ public class GroupTests {
         };
 
         Group gr5 = new Group(5, arSt2);
+        Group gr6 = new Group(5, arSt2);
 
         Assert.assertTrue(gr1.getId() == 0);
         Assert.assertTrue(gr1.getStudents().length == Group.getInitGrSize());
@@ -46,8 +47,11 @@ public class GroupTests {
         Assert.assertTrue(gr5.getStudents().length == 3);
         Assert.assertTrue(gr5.getSize()==2);
 
-        Assert.assertTrue(gr5.toString().equals("Group 5 includes:\nStudent: {st_name1 st_surname1};Student: {st_name3};"));
-        // System.out.println(gr1.toString());
+        Assert.assertTrue(gr5.toString().equals("Group 5 includes:\nStudent: " +
+                "{st_name1 st_surname1};null;Student: {st_name3};"));
+
+        Assert.assertFalse(gr5.equals(gr1));
+        Assert.assertTrue(gr6.equals(gr5));
     }
 
     @Test
@@ -68,17 +72,58 @@ public class GroupTests {
         Group gr2 = new Group(2,arSt2);
         Assert.assertTrue(gr2.getSize()==4);
         Student st2 = new Student();
+
         Assert.assertTrue(gr2.addStudent(st2));
         Assert.assertTrue(gr2.getSize()==5);
 
         Student[] arSt3 = new Student[]{
                 new Student("st_name1"),
                 new Student("st_name2"),
-                new Student("st_name3")
+                new Student("st_name3"),
+                null
+
         };
         Group gr3 = new Group(3,arSt3);
+
         Student st3 = new Student();
-        Assert.assertFalse(gr3.addStudent(st3));
+        Assert.assertTrue(gr3.addStudent(st3));
+
+        Assert.assertTrue(gr2.findStudent(st2)==3);
+        Assert.assertTrue(gr2.findStudent(null)==-1);
     }
+
+    @Test
+    public void checkDeleteStudentsOperations(){
+
+        Group gr = new Group (1, new Student[]{
+                new Student("student1"),
+                new Student("student2"),
+                new Student("student3"),
+
+        });
+
+        gr.deleteStudent(gr.getStudents()[1]);
+        Assert.assertTrue(gr.getStudents()[1].getName().equals("student3"));
+        gr.deleteStudentInd(0);
+        Assert.assertTrue(gr.getStudents()[0].getName().equals("student3"));
+    }
+
+    @Test
+    public void checkReplaceStudentsOperations(){
+
+        Group gr = new Group (1, new Student[]{
+                new Student("student1"),
+                new Student("student2"),
+                new Student("student3"),
+
+        });
+
+        gr.replaceStudent(1, new Student("aaa_name"));
+        Assert.assertTrue(gr.getStudents()[1].getName().equals("aaa_name"));
+        gr.replaceStudent(0, null);
+        Assert.assertTrue(gr.getStudents()[0]==null);
+
+    }
+
 }
 

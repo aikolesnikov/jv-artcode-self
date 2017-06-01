@@ -9,39 +9,31 @@ class Student {
     String getName() {
         return name;
     }
-
     void setName(String name) {
         this.name = name;
     }
-
     String getSurname() {
         return surname;
     }
-
-    public void setSurname(String surname) {
+    void setSurname(String surname) {
         this.surname = surname;
     }
-
     int getAge() {
         return age;
     }
-
-    public void setAge(int age) {
+    void setAge(int age) {
         this.age = age;
     }
 
     Student() {
     }
-
     Student(String name) {
         this.name = name;
     }
-
     Student(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }
-
     Student(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
@@ -51,5 +43,13 @@ class Student {
     @Override
     public String toString() {
         return "Student: {" + ((this.name == null) ? "" : name) + ((this.surname == null) ? "" : (" " + surname)) + '}';
+    }
+
+    @Override
+    public boolean equals(Object st) {
+        return st != null &&
+                // st instanceof Student &&
+                st.getClass() == this.getClass() &&
+                this.toString().equals(st.toString());
     }
 }

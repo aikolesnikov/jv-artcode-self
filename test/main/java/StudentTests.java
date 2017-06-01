@@ -21,5 +21,11 @@ public class StudentTests {
         Assert.assertTrue(st4.getAge()==17);
 
         Assert.assertTrue(st4.toString().equals("Student: {st4_name st4_surname}"));
+
+        Student st5 = new Student("st4_name", "st4_surname", 17);
+        Assert.assertFalse(st1.equals(st5));
+        Assert.assertFalse(st4.equals(null));
+        Assert.assertTrue(st4.equals(st5));
+
     }
 }
