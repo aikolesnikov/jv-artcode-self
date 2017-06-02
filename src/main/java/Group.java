@@ -7,7 +7,7 @@ class Group {
     protected int size;
     protected Student[] students;
 
-    int getId() {
+    public int getId() {
         return id;
     }
 
@@ -15,38 +15,38 @@ class Group {
         this.id = id;
     }
 
-    int getSize() {
+    public int getSize() {
         return size;
     }
 
-    void setSize(int size) {
+    public void setSize(int size) {
         this.size = size;
     }
 
-    Student[] getStudents() {
+    public Student[] getStudents() {
         return students;
     }
 
-    void setStudents(Student[] students) {
+    public void setStudents(Student[] students) {
         this.students = students;
     }
 
-    static int getInitGrSize() {
+    public static int getInitGrSize() {
         return INIT_GR_SIZE;
     }
 
-    Group() {
+    public Group() {
         students = new Student[INIT_GR_SIZE];
         size = 0;
     }
 
-    Group(int id) {
+    public Group(int id) {
         this.id = id;
         this.students = new Student[INIT_GR_SIZE];
         size = 0;
     }
 
-    Group(int id, Student[] students) {
+    public Group(int id, Student[] students) {
         this.id = id;
         if (students == null) {
             this.students = new Student[INIT_GR_SIZE];
@@ -59,7 +59,7 @@ class Group {
         }
     }
 
-    boolean addStudent(Student student) {
+    public boolean addStudent(Student student) {
         if (student == null) return false;
         if (this.size == students.length) return false;
 
@@ -75,7 +75,7 @@ class Group {
         return true;
     }
 
-    int findStudent(Student student) {
+    public int findStudent(Student student) {
         if (student != null) {
             for (int i = 0; i < students.length; i++) {
                 if (student == students[i]) return i;
@@ -89,7 +89,7 @@ class Group {
 
     }
 
-    boolean deleteStudent(Student student) {
+    public boolean deleteStudent(Student student) {
 
         int index = findStudent(student);
         if (findStudent(student) != -1) {
@@ -105,7 +105,7 @@ class Group {
         return false;
     }
 
-    boolean deleteStudentInd(int index) {
+    public boolean deleteStudentInd(int index) {
 
         if (index < 0 || index > this.students.length - 1) return false;
 
@@ -119,14 +119,14 @@ class Group {
         return true;
     }
 
-    boolean replaceStudent(int index, Student student) {
+    public boolean replaceStudent(int index, Student student) {
         if (index < 0 || index > this.students.length - 1) return false;
         this.students[index] = student;
 
         return true;
     }
 
-    void sortStudents() {
+    public void sortStudents() {
         int bound = students.length;
         Student tmpSt;
 
