@@ -53,15 +53,14 @@ class Student {
         return "Student: {" + ((this.name == null) ? "" : name) + ((this.surname == null) ? "" : (" " + surname)) + '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if ((o == null) || (!(o.getClass() == this.getClass()))) return false;
-
-        Student tmpO = (Student) o;
-        return (tmpO.age == age) &&
-                (tmpO.name != null) && (name != null) && (tmpO.name.equals(name)) &&
-                (tmpO.surname != null) && (surname != null) && (tmpO.surname.equals(surname));
-    }
+@Override
+public boolean equals(Object o) {
+    if ((o == null) || (!(o.getClass() == this.getClass()))) return false;
+    Student tmpO = (Student) o;
+    return (tmpO.age == age) &&
+            (tmpO.name != null) && (name != null) && (tmpO.name.equals(name)) &&
+            (tmpO.surname != null) && (surname != null) && (tmpO.surname.equals(surname));
+}
 
 /*
         return tmpO != null &&
