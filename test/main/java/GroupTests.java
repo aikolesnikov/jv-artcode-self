@@ -138,10 +138,13 @@ public class GroupTests {
     public void checkSortStudentsOperations(){
 
         Group gr = new Group (1, new Student[]{
+                null,
                 new Student("student4"),
+                null,
                 new Student("student2"),
                 new Student("student3"),
                 new Student("student_aaa"),
+                null,
                 new Student("student0")
         });
 

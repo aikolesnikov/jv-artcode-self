@@ -60,19 +60,16 @@ public class Group {
     }
 
     public boolean addStudent(Student student) {
-        if (student == null) return false;
-        if (this.size == students.length) return false;
+        if ((student == null) || (size == students.length)) return false;
 
-        for (int i = 0; i < students.length - 1; i++) {
+        for (int i = students.length - 1; i >= 0; i--) {
             if (students[i] == null) {
                 students[i] = student;
                 size++;
                 return true;
             }
         }
-        students[size] = student;
-
-        return true;
+        return false;
     }
 
     public int findStudent(Student student) {
@@ -86,7 +83,6 @@ public class Group {
             if (null == students[i]) return i;
         }
         return -1;
-
     }
 
     public boolean deleteStudent(Student student) {
@@ -122,7 +118,9 @@ public class Group {
 
         for (int i = 0; i < bound; i++) {
             for (int j = bound - 1; j > i; j--) {
-                if (students[j].toString().compareToIgnoreCase(students[j - 1].toString()) > 0) {
+                if ((students[j - 1] == null) ||
+                        (students[j] != null) && (students[j - 1] != null) &&
+                                (students[j].getName().compareToIgnoreCase(students[j - 1].getName()) > 0)) {
                     tmpSt = students[j];
                     students[j] = students[j - 1];
                     students[j - 1] = tmpSt;
