@@ -131,11 +131,11 @@ class Group {
         Student tmpSt;
 
         for (int i = 0; i < bound; i++) {
-            for (int j = bound-1; j > i; j--) {
-                if (students[j].toString().compareToIgnoreCase(students[j-1].toString())>0){
+            for (int j = bound - 1; j > i; j--) {
+                if (students[j].toString().compareToIgnoreCase(students[j - 1].toString()) > 0) {
                     tmpSt = students[j];
-                    students[j] = students[j-1];
-                    students[j-1] = tmpSt;
+                    students[j] = students[j - 1];
+                    students[j - 1] = tmpSt;
                 }
             }
         }
@@ -155,11 +155,25 @@ class Group {
     }
 
     @Override
-    public boolean equals(Object gr) {
-        return gr != null &&
-                // gr instanceof Group &&
-                gr.getClass() == this.getClass() &&
-                this.toString().equals(gr.toString());
+    public boolean equals(Object o) {
+
+        if ((o == null) || (!(o.getClass() == this.getClass()))) return false;
+
+        Group tmpO = (Group) o;
+        if ((students == null) || (tmpO.getStudents() == null)) return false;
+        int len = students.length;
+        if (len != tmpO.getStudents().length) return false;
+
+        for (int i = 0; i < len; i++) {
+            if (
+                    (tmpO.getStudents()[i] == null) || (students[i] == null)
+                    || (!(tmpO.getStudents()[i].equals(students[i])))
+                    )
+                return false;
+        }
+
+        return (tmpO.id == id) && (tmpO.size == size);
+
     }
 
 }

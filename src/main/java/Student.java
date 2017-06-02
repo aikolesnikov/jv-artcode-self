@@ -9,31 +9,39 @@ class Student {
     String getName() {
         return name;
     }
+
     void setName(String name) {
         this.name = name;
     }
+
     String getSurname() {
         return surname;
     }
+
     void setSurname(String surname) {
         this.surname = surname;
     }
+
     int getAge() {
         return age;
     }
+
     void setAge(int age) {
         this.age = age;
     }
 
     Student() {
     }
+
     Student(String name) {
         this.name = name;
     }
+
     Student(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }
+
     Student(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
@@ -46,10 +54,20 @@ class Student {
     }
 
     @Override
-    public boolean equals(Object st) {
-        return st != null &&
-                // st instanceof Student &&
-                st.getClass() == this.getClass() &&
-                this.toString().equals(st.toString());
+    public boolean equals(Object o) {
+        if ((o == null) || (!(o.getClass() == this.getClass()))) return false;
+
+        Student tmpO = (Student) o;
+        return (tmpO.age == age) &&
+                (tmpO.name != null) && (name != null) && (tmpO.name.equals(name)) &&
+                (tmpO.surname != null) && (surname != null) && (tmpO.surname.equals(surname));
     }
+
+/*
+        return tmpO != null &&
+                // tmpO instanceof Student &&
+                tmpO.getClass() == this.getClass() &&
+                this.toString().equals(tmpO.toString());
+*/
+
 }
