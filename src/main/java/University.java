@@ -9,7 +9,7 @@ class University {
     private int size;
     private Group[] groups;
 
-    int getId() {
+    public int getId() {
         return id;
     }
 
@@ -25,39 +25,39 @@ class University {
         this.name = name;
     }
 
-    int getSize() {
+    public int getSize() {
         return size;
     }
 
-    void setSize(int size) {
+    public void setSize(int size) {
         this.size = size;
     }
 
-    Group[] getGroups() {
+    public Group[] getGroups() {
         return groups;
     }
 
-    void setGroups(Group[] groups) {
+    public void setGroups(Group[] groups) {
         this.groups = groups;
     }
 
-    static int getInitGrSize() {
+    public static int getInitGrSize() {
         return INIT_UN_SIZE;
     }
 
-    University() {
+    public University() {
         this.groups = new Group[INIT_UN_SIZE];
         size = 0;
     }
 
-    University(int id) {
+    public University(int id) {
         this.id = id;
         this.groups = new Group[INIT_UN_SIZE];
         size = 0;
     }
 
 
-    University(int id, String name, Group[] groups) {
+    public University(int id, String name, Group[] groups) {
         this.id = id;
         this.name = name;
         if (groups == null) {
@@ -71,7 +71,7 @@ class University {
         }
     }
 
-    boolean addGroup(Group group) {
+    public boolean addGroup(Group group) {
         if (group == null) return false;
         if (this.size == groups.length) return false;
 
@@ -87,7 +87,7 @@ class University {
         return true;
     }
 
-    int findGroup(Group group) {
+    public int findGroup(Group group) {
         if (group != null) {
             for (int i = 0; i < groups.length; i++) {
                 if (group == groups[i]) return i;
@@ -101,7 +101,7 @@ class University {
 
     }
 
-    boolean deleteGroup(Group group) {
+    public boolean deleteGroup(Group group) {
 
         int index = findGroup(group);
         if (findGroup(group) != -1) {
@@ -117,7 +117,7 @@ class University {
         return false;
     }
 
-    boolean deleteGroupInd(int index) {
+    public boolean deleteGroupInd(int index) {
 
         if (index < 0 || index > this.groups.length - 1) return false;
 
@@ -131,14 +131,14 @@ class University {
         return true;
     }
 
-    boolean replaceGroup(int index, Group group) {
+    public boolean replaceGroup(int index, Group group) {
         if (index < 0 || index > this.groups.length - 1) return false;
         this.groups[index] = group;
 
         return true;
     }
 
-    void sortGroups() {
+    public void sortGroups() {
         int bound = groups.length;
         Group tmpSt;
 
