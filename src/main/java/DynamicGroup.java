@@ -19,7 +19,6 @@ public class DynamicGroup extends Group {
     @Override
     public boolean addStudent(Student student) {
         if (student == null) return false;
-
         if (this.size == students.length) {
             Student[] newAr = new Student[this.students.length * 15 / 10];
             System.arraycopy(students, 0, newAr, 0, students.length);
@@ -27,15 +26,13 @@ public class DynamicGroup extends Group {
             students[size] = student;
             return true;
         }
-
-        for (int i = 0; i < students.length-1; i++) {
+        for (int i = 0; i < students.length - 1; i++) {
             if (students[i] == null) {
                 students[i] = student;
                 size++;
                 return true;
             }
         }
-
         return true;
     }
 }

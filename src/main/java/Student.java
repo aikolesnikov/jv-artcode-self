@@ -6,43 +6,43 @@ class Student {
     private String surname;
     private int age;
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    String getSurname() {
+    public String getSurname() {
         return surname;
     }
 
-    void setSurname(String surname) {
+    public void setSurname(String surname) {
         this.surname = surname;
     }
 
-    int getAge() {
+    public int getAge() {
         return age;
     }
 
-    void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    Student() {
+    public Student() {
     }
 
-    Student(String name) {
+    public Student(String name) {
         this.name = name;
     }
 
-    Student(String name, String surname) {
+    public Student(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }
 
-    Student(String name, String surname, int age) {
+    public Student(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -53,14 +53,14 @@ class Student {
         return "Student: {" + ((this.name == null) ? "" : name) + ((this.surname == null) ? "" : (" " + surname)) + '}';
     }
 
-@Override
-public boolean equals(Object o) {
-    if ((o == null) || (!(o.getClass() == this.getClass()))) return false;
-    Student tmpO = (Student) o;
-    return (tmpO.age == age) &&
-            (tmpO.name != null) && (name != null) && (tmpO.name.equals(name)) &&
-            (tmpO.surname != null) && (surname != null) && (tmpO.surname.equals(surname));
-}
+    @Override
+    public boolean equals(Object o) {
+        if ((o == null) || (!(o.getClass() == this.getClass()))) return false;
+        Student tmpO = (Student) o;
+        return (tmpO.age == age) &&
+                (tmpO.name != null) && (name != null) && (tmpO.name.equals(name)) &&
+                (tmpO.surname != null) && (surname != null) && (tmpO.surname.equals(surname));
+    }
 
 /*
         return tmpO != null &&
