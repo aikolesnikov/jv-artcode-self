@@ -156,7 +156,6 @@ class Group {
 
     @Override
     public boolean equals(Object o) {
-
         if ((o == null) || (!(o.getClass() == this.getClass()))) return false;
 
         Group tmpO = (Group) o;
@@ -165,15 +164,12 @@ class Group {
         if (len != tmpO.getStudents().length) return false;
 
         for (int i = 0; i < len; i++) {
-            if (
-                    (tmpO.getStudents()[i] == null) || (students[i] == null)
-                    || (!(tmpO.getStudents()[i].equals(students[i])))
-                    )
+            if ((tmpO.getStudents()[i] == null) || (students[i] == null)
+                    || (!(tmpO.getStudents()[i].equals(students[i]))))
                 return false;
         }
 
         return (tmpO.id == id) && (tmpO.size == size);
-
     }
 
 }
