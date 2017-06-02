@@ -2,7 +2,7 @@
  * univer class
  */
 
-class University {
+public class University {
     private static final int INIT_UN_SIZE = 5;
     private int id;
     private String name;

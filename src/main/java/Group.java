@@ -1,7 +1,7 @@
 /**
  * group of students class
  */
-class Group {
+public class Group {
     protected static final int INIT_GR_SIZE = 5;
     protected int id;
     protected int size;
@@ -78,7 +78,7 @@ class Group {
     public int findStudent(Student student) {
         if (student != null) {
             for (int i = 0; i < students.length; i++) {
-                if (student == students[i]) return i;
+                if (student.equals(students[i])) return i;
             }
             return -1;
         }
@@ -90,32 +90,22 @@ class Group {
     }
 
     public boolean deleteStudent(Student student) {
-
         int index = findStudent(student);
         if (findStudent(student) != -1) {
-            Student[] newAr = new Student[this.students.length - 1];
-            this.size--;
-
-            System.arraycopy(this.students, 0, newAr, 0, index);
-            System.arraycopy(this.students, index + 1, newAr, index, this.students.length - 1 - index);
-
-            this.students = newAr;
+            if (index < 0 || index > this.students.length - 1) return false;
+            System.arraycopy(students, index + 1, students, index, students.length - 1 - index);
+            size--;
+            students[students.length - 1] = null;
             return true;
         }
         return false;
     }
 
     public boolean deleteStudentInd(int index) {
-
         if (index < 0 || index > this.students.length - 1) return false;
-
-        Student[] newAr = new Student[this.students.length - 1];
-        this.size--;
-
-        System.arraycopy(this.students, 0, newAr, 0, index);
-        System.arraycopy(this.students, index + 1, newAr, index, this.students.length - 1 - index);
-
-        this.students = newAr;
+        System.arraycopy(students, index + 1, students, index, students.length - 1 - index);
+        size--;
+        students[students.length - 1] = null;
         return true;
     }
 

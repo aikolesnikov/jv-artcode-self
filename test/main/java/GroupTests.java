@@ -81,7 +81,7 @@ public class GroupTests {
         };
         Group gr2 = new Group(2,arSt2);
         Assert.assertTrue(gr2.getSize()==4);
-        Student st2 = new Student();
+        Student st2 = new Student("nn","ss",25);
 
         Assert.assertTrue(gr2.addStudent(st2));
         Assert.assertTrue(gr2.getSize()==5);
@@ -106,10 +106,9 @@ public class GroupTests {
     public void checkDeleteStudentsOperations(){
 
         Group gr = new Group (1, new Student[]{
-                new Student("student1"),
-                new Student("student2"),
-                new Student("student3"),
-
+                new Student("student1","ss",23),
+                new Student("student2","ss",23),
+                new Student("student3","ss",23),
         });
 
         gr.deleteStudent(gr.getStudents()[1]);
