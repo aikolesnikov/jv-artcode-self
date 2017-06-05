@@ -155,6 +155,19 @@ public class GroupTests {
 
     }
 
+    @Test
+    public void checkGroupEqualsWhenNoStudents(){
+        Group group = new Group(1);
+        Group copy = new Group(1);
+
+        group.addStudent(new Student("Smith"));
+        copy.addStudent(new Student("Smith"));
+
+        // Assert.assertEquals(group, copy);
+        // Assert.assertTrue(group.equals(copy));
+        Assert.assertTrue(copy.equals(group));
+
+    }
 
 }
 
