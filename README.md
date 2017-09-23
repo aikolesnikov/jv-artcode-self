@@ -153,3 +153,21 @@ HTTP протокол. WEB сервис. SOAP, REST.
 22
 Составление резюме. Подготовка к собеседованию.
 Рассмотрение типичных вопросов.
+
+++ QA Automation Selenium Java»:
+
+1. Introduction. Selenium gradations. First test on Selenium IDE. Locators.
+2. Basic commands Selenium WD. Writing the first simple tests.
+3. PageObject. PageFactory. UIMapping
+4. Log4j
+5. JUnit -> Annotations, hierarchy of annotations. the execution order of tests. Assertions
+6. JUnit -> Annotations, hierarchy of annotations. the execution order of tests. Assertions
+7. Practice. Implicit wait Vs. Explicit wait in selenium webdriver;
+8. Git
+9. Maven
+10. Wrappers
+11. Practice
+12. Cross browser testing (FF, IE, Chrome, PhantomJS). CI (Jenkins).
+13. Selenium Grid
+14. BDD. Cucumber.
+15. Finalization. Debriefing. CV. Preparation for a job interview.
