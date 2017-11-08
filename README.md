@@ -155,8 +155,7 @@ HTTP протокол. WEB сервис. SOAP, REST.
 Составление резюме. Подготовка к собеседованию.
 Рассмотрение типичных вопросов.
 
-++ QA Automation Selenium Java»:
-
+23 Auto
 1. Introduction. Selenium gradations. First test on Selenium IDE. Locators.
 2. Basic commands Selenium WD. Writing the first simple tests.
 3. PageObject. PageFactory. UIMapping
@@ -172,3 +171,36 @@ HTTP протокол. WEB сервис. SOAP, REST.
 13. Selenium Grid
 14. BDD. Cucumber.
 15. Finalization. Debriefing. CV. Preparation for a job interview.
+
+24 Enterprise
+1		
+Introduction into Java EE 
+Enterprise.
+Java platform.
+Course overview.
+2		
+Java EE. Essential technologies 
+Java 8
+Networking
+Servlets
+Java Server Pages (JSP)
+Java Database Conectivity (JDBC)
+RESTful resources
+Gradle
+3		
+Object-Relational Mapping. JPA with Hibernate 
+ORM
+Java persistence with Hibernate
+4		
+Spring framework 
+Introduction
+Spring MVC
+Spring Data
+Spring Security
+Testing
+5		
+Bootstrapping Spring. Groovy 
+Spring Boot
+Groovy
+Grails
+Spring with Groovy
